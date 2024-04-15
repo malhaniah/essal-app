@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+:root {
+  /* Ejada's Colors */
+  --ejada-main-color: #001081;
+  --ejada-secondary-color: #0000ff;
+  --ejada-accent-color: #1fed93;
+  /* Defaults */
+  --white: #ffffff;
+  /* Text Colors */
+  --ejada-text-color: #333333;
+  --ejada-secondary-text-color: #666666;
+  --ejada-error-text-color: #f8394a;
+  --ejada-success-text-color: #58bf96;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Readex Pro", sans-serif;
+}
+
+html, body{
+  height: 100%;
+}
