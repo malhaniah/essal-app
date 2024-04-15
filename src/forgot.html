@@ -31,43 +31,38 @@
         </nav>
 
         <div class="form-content">
-          <h4>Login</h4>
+          <h4>Forgot your password?</h4>
           <div class="inputs-container">
             <div>
-              <label for=""
+              <label for="email"
                 >Email Address<span class="required-star">*</span>
               </label>
-              <input type="text" placeholder="e.g: name@company.com" />
+              <input
+                type="text"
+                placeholder="e.g: name@company.com"
+                id="email"
+              />
             </div>
-            <div>
-              <label for=""
-                >Password<span class="required-star">*</span>
-              </label>
-              <div class="form-input flex-row">
-                <input
-                  type="password"
-                  placeholder="************"
-                  id="password"
-                />
-                <img
-                  src="assets/icons/eyeslash.svg"
-                  alt=""
-                  onclick="togglePassword()"
-                />
-              </div>
+            <div class="invalid-container">
+              <img
+                src="assets/icons/notification.svg"
+                alt="notification of an error icon"
+              />
+              <p>
+                We can’t seem to find the email you normally use. Resend using
+                the email you registered with
+              </p>
             </div>
           </div>
-
-          <div class="form-end flex-row">
-            <div class="flex-row">
-              <input type="checkbox" name="" id="" />
-              <p>Remember me</p>
-            </div>
-            <a href="forgot.html">Forgot Password</a>
-          </div>
-          <button class="login-btn capital-text">Login to your account</button>
+          <br />
+          <button
+            class="login-btn capital-text"
+            onclick="forgotPasswordValidation()"
+          >
+            Reset Password
+          </button>
           <div class="form-footer">
-            <p>Not registered? <span>Sign up</span></p>
+            <p>Back to<a href="login.html">Login</a></p>
             <div class="flex-row">
               <p>Terms & Conditions</p>
               <p>|</p>
