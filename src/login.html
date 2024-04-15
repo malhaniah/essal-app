@@ -44,8 +44,16 @@
                 >Password<span class="required-star">*</span>
               </label>
               <div class="form-input flex-row">
-                <input type="password" placeholder="************" />
-                <img src="assets/icons/eyeslash.svg" alt="" />
+                <input
+                  type="password"
+                  placeholder="************"
+                  id="password"
+                />
+                <img
+                  src="assets/icons/eyeslash.svg"
+                  alt=""
+                  onclick="togglePassword()"
+                />
               </div>
             </div>
           </div>
@@ -74,5 +82,6 @@
         <img src="assets/images/Layer_1.png" alt="" />
       </div>
     </main>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

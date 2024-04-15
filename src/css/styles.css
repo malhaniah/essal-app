@@ -116,9 +116,18 @@ body {
   background-color: var(--ejada-main-color);
   padding: 15px;
   border-radius: 7px;
+  border: none;
   color: var(--white);
   margin-bottom: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
+
+.form-content .login-btn:hover{
+  transform: scale(0.97);
+  background: var(--ejada-secondary-color);
+}
+
 .capital-text {
   text-transform: uppercase;
 }
