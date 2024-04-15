@@ -79,15 +79,49 @@ body {
   gap: 20px;
   color: var(--ejada-secondary-text-color);
 }
-.form-content input,
-.form-input {
+.inputs-container input,
+.inputs-container .form-input {
   width: 100%;
   border: 1px solid var(--ejada-main-color);
   border-radius: 7px;
   padding: 15px;
   margin-top: 15px;
+  outline: none;
+}
+.error-x {
+  display: none;
+}
+/* ---- validation ----- */
+.inputs-container.error input,
+.inputs-container.error .form-input {
+  border: 1px solid var(--ejada-error-text-color);
+}
+.hide-password.error {
+  display: none;
+}
+.error-x.show {
+  display: block;
+}
+.error-msg-box {
+  background-color: #fff5f6;
+  border: 1px solid var(--ejada-error-text-color);
+  margin-top: 20px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+.error-msg-box p {
+  font-size: 14px;
+  color: #515151;
 }
 
+.error-msg-box.show {
+  display: flex;
+}
+/* ----------- */
 .form-content .form-input input {
   border: none;
   padding: 0;
@@ -123,7 +157,7 @@ body {
   cursor: pointer;
 }
 
-.form-content .login-btn:hover{
+.form-content .login-btn:hover {
   transform: scale(0.97);
   background: var(--ejada-secondary-color);
 }

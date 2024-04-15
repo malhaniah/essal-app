@@ -37,7 +37,18 @@
               <label for=""
                 >Email Address<span class="required-star">*</span>
               </label>
-              <input type="text" placeholder="e.g: name@company.com" />
+              <div class="form-input flex-row">
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="e.g: name@company.com"
+                />
+                <img
+                  class="error-x"
+                  src="assets/icons/carbon_close-outline.svg"
+                  alt=""
+                />
+              </div>
             </div>
             <div>
               <label for=""
@@ -50,14 +61,27 @@
                   id="password"
                 />
                 <img
+                  id="hide-password-icon"
+                  class="hide-password"
                   src="assets/icons/eyeslash.svg"
                   alt=""
                   onclick="togglePassword()"
                 />
+                <img
+                  class="error-x"
+                  src="assets/icons/carbon_close-outline.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-
+          <div class="error-msg-box">
+            <img src="assets/icons/ri_information-line.svg" alt="" />
+            <p>
+              The username or password you entered is incorrect, Please try
+              again!
+            </p>
+          </div>
           <div class="form-end flex-row">
             <div class="flex-row">
               <input type="checkbox" name="" id="" />
@@ -65,7 +89,9 @@
             </div>
             <p>Forgot Password</p>
           </div>
-          <button class="login-btn capital-text">Login to your account</button>
+          <button onclick="validateInput()" class="login-btn capital-text">
+            Login to your account
+          </button>
           <div class="form-footer">
             <p>Not registered? <span>Sign up</span></p>
             <div class="flex-row">
