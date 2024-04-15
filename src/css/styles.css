@@ -105,7 +105,8 @@ body {
 .error-msg-box {
   background-color: #fff5f6;
   border: 1px solid var(--ejada-error-text-color);
-  margin-top: 20px;
+  margin: 20px 0px;
+
   border-radius: 7px;
   padding: 10px 15px;
   display: flex;
