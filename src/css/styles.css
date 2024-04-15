@@ -116,9 +116,18 @@ body {
   background-color: var(--ejada-main-color);
   padding: 15px;
   border-radius: 7px;
+  border: none;
   color: var(--white);
   margin-bottom: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
+
+.form-content .login-btn:hover{
+  transform: scale(0.97);
+  background: var(--ejada-secondary-color);
+}
+
 .capital-text {
   text-transform: uppercase;
 }
@@ -152,7 +161,7 @@ header {
   padding: 50px auto;
 }
 
-nav {
+.home-nav {
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -208,7 +217,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-.menu-item .menu-link > button:hover{
+.menu-item .menu-link > button:hover {
   background: var(--ejada-secondary-color);
   transform: scale(0.97);
 }
@@ -233,17 +242,17 @@ nav {
   justify-content: start;
 }
 
-.content-text h1{
+.content-text h1 {
   font-size: 64px;
   color: var(--ejada-main-color);
   font-weight: 500;
 }
 
-.content-text h4{
+.content-text h4 {
   color: var(--ejada-secondary-color);
 }
 
-.content-text h6{
+.content-text h6 {
   padding-top: 32px;
   font-weight: 300;
   font-size: 20px;
@@ -258,4 +267,10 @@ nav {
 }
 .content-image img {
   max-width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-container {
+    padding: 50px 130px;
+  }
 }
