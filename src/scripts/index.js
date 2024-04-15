@@ -9,6 +9,7 @@ function togglePassword() {
   }
 }
 
+
 // show error msg
 function validateInput() {
   const passwordInput = document.getElementById("password");
@@ -26,4 +27,30 @@ function validateInput() {
       e.classList.add("show");
     });
   }
+}
+
+function forgotPasswordValidation() {
+  const emailValue = document.getElementById("email").value;
+  const invalidMessage = document.querySelector(".invalid-container");
+  const email = document.getElementById("email");
+
+  let isValid = false;
+
+  if (
+    emailValue.length > 0 &&
+    emailValue.includes("@") &&
+    emailValue.includes(".com")
+  ) {
+    isValid = true;
+  }
+
+  if (isValid) {
+    email.classList.remove("active");
+    invalidMessage.style.display = "none";
+  } else {
+    email.classList.add("active");
+    invalidMessage.style.display = "flex";
+  }
+
+  console.log(isValid);
 }

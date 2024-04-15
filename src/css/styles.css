@@ -11,6 +11,7 @@
   --ejada-text-color: #333333;
   --ejada-secondary-text-color: #666666;
   --ejada-error-text-color: #f8394a;
+  --ejada-error-background-color: #FFF5F6;
   --ejada-success-text-color: #58bf96;
 }
 
@@ -45,6 +46,7 @@ body {
 .form-container li {
   list-style: none;
 }
+
 .form-container a {
   text-decoration: none;
 }
@@ -53,9 +55,11 @@ body {
   justify-content: space-between;
   margin: 30px 0px 70px;
 }
+
 .form-container .form-header .menu-list {
   gap: 30px;
 }
+
 .form-container .form-header .menu-list li a {
   color: #353535;
 }
@@ -68,19 +72,27 @@ body {
 .form-content {
   width: 100%;
 }
+
 .form-content > h4 {
   color: var(--ejada-main-color);
   font-size: 36px;
   margin-bottom: 50px;
 }
+
 .form-content .inputs-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   color: var(--ejada-secondary-text-color);
 }
+
 .inputs-container input,
 .inputs-container .form-input {
+
+
+.form-content input,
+.form-input {
+
   width: 100%;
   border: 1px solid var(--ejada-main-color);
   border-radius: 7px;
@@ -131,6 +143,7 @@ body {
 .required-star {
   color: #be1e2d;
 }
+
 .form-content .form-end {
   justify-content: space-between;
   margin-bottom: 40px;
@@ -139,13 +152,16 @@ body {
   color: var(--ejada-secondary-text-color);
   white-space: nowrap;
 }
+
 .form-content .form-end input {
   margin-right: 5px;
   margin-top: 0;
 }
+
 .form-content .form-end > p {
   color: var(--ejada-main-color);
 }
+
 .form-content .login-btn {
   width: 100%;
   background-color: var(--ejada-main-color);
@@ -166,6 +182,7 @@ body {
 .capital-text {
   text-transform: uppercase;
 }
+
 .form-footer {
   display: flex;
   flex-direction: column;
@@ -173,17 +190,21 @@ body {
   gap: 15px;
   color: var(--ejada-secondary-text-color);
 }
+
 .form-footer span,
 .form-footer div {
   color: var(--ejada-main-color);
 }
+
 .form-footer div {
   gap: 10px;
 }
+
 .image-container {
   background-color: #f2f6ff;
   width: 100%;
 }
+
 .image-container img {
   width: 100%;
   margin: 150px auto;
@@ -308,4 +329,31 @@ header {
   .form-container {
     padding: 50px 130px;
   }
+}
+
+/* Forgot Password */
+#email.active{
+  border: 1px solid var(--ejada-error-text-color);
+}
+
+.invalid-container{
+  background-color: var(--ejada-error-background-color);
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 1rem;
+  display: none;
+  border: 1px solid var(--ejada-error-text-color);
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.invalid-container p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ejada-error-text-color);
+}
+
+#email.active .invalid-container{
+  display: block !important;
 }
