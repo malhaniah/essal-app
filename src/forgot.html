@@ -55,12 +55,13 @@
             </div>
           </div>
           <br />
-          <button
+          <input
             class="login-btn capital-text"
-            onclick="forgotPasswordValidation()"
-          >
-            Reset Password
-          </button>
+            onclick="forgotPasswordValidation(), window.open('otp.html')"
+            type="submit"
+            value="Reset Password"
+          />
+
           <div class="form-footer">
             <p>Back to<a href="login.html">Login</a></p>
             <div class="flex-row">

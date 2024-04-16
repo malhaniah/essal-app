@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0 !important;
+}
+
 html,
 body {
   height: 100%;
@@ -89,11 +93,11 @@ body {
 
 .inputs-container input,
 .inputs-container .form-input {
-
+  color: var(--ejada-text-color);
+}
 
 .form-content input,
 .form-input {
-
   width: 100%;
   border: 1px solid var(--ejada-main-color);
   border-radius: 7px;
@@ -360,6 +364,18 @@ header {
 }
 
 /* Password Reset OTP */
+
+.inputs-container > p > span,
+.reset-container > p > span {
+  color: var(--ejada-main-color);
+  font-weight: 600;
+}
+
+.reset-container  {
+  text-align: center;
+  line-height: 40px;
+}
+
 .otp-input-container {
   display: flex;
   justify-content: space-between;
@@ -372,7 +388,22 @@ header {
   height: 94px;
   background: var(--off-gray-color);
   outline: none;
+  border: none !important;
   font-size: 20px;
   text-align: center;
-  border: none !important;
+}
+
+.otp-input:active,
+.otp-input:focus-visible {
+  border: 2px solid var(--ejada-main-color) !important;
+  animation: Breathing 1s infinite;
+}
+
+@keyframes Breathing {
+  0% {
+    border-width: 0;
+  }
+  100% {
+    border-width: 3px;
+  }
 }
