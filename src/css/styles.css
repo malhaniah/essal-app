@@ -186,7 +186,9 @@ body {
 .capital-text {
   text-transform: uppercase;
 }
-
+.center-text {
+  text-align: center;
+}
 .form-footer {
   display: flex;
   flex-direction: column;
@@ -432,4 +434,9 @@ header {
 
 .hide {
   display: none;
+}
+
+.form-content .done-message {
+  font-size: 22px;
+  color: var(--ejada-main-color);
 }
