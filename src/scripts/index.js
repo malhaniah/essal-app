@@ -9,6 +9,26 @@ function togglePassword() {
   }
 }
 
+
+// show error msg
+function validateInput() {
+  const passwordInput = document.getElementById("password");
+  const emailInput = document.getElementById("email");
+  const errorBox = document.getElementsByClassName("error-msg-box")[0];
+  const inputContainer = document.getElementsByClassName("inputs-container")[0];
+  const hidePasswordIcon = document.getElementById("hide-password-icon");
+  const errorIcon = document.querySelectorAll(".error-x");
+
+  if ((passwordInput.value === "") | (emailInput.value === "")) {
+    errorBox.classList.add("show");
+    inputContainer.classList.add("error");
+    hidePasswordIcon.classList.add("error");
+    errorIcon.forEach((e) => {
+      e.classList.add("show");
+    });
+  }
+}
+
 function forgotPasswordValidation() {
   const emailValue = document.getElementById("email").value;
   const invalidMessage = document.querySelector(".invalid-container");

@@ -54,7 +54,7 @@ body {
 
 .form-container .form-header {
   justify-content: space-between;
-  margin: 30px 0px 50px;
+  margin: 30px 0px 70px;
 }
 
 .form-container .form-header .menu-list {
@@ -87,15 +87,55 @@ body {
   color: var(--ejada-secondary-text-color);
 }
 
+.inputs-container input,
+.inputs-container .form-input {
+
+
 .form-content input,
 .form-input {
+
   width: 100%;
   border: 1px solid var(--ejada-main-color);
   border-radius: 7px;
   padding: 15px;
   margin-top: 15px;
+  outline: none;
+}
+.error-x {
+  display: none;
+}
+/* ---- validation ----- */
+.inputs-container.error input,
+.inputs-container.error .form-input {
+  border: 1px solid var(--ejada-error-text-color);
+}
+.hide-password.error {
+  display: none;
+}
+.error-x.show {
+  display: block;
+}
+.error-msg-box {
+  background-color: #fff5f6;
+  border: 1px solid var(--ejada-error-text-color);
+  margin: 20px 0px;
+
+  border-radius: 7px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+.error-msg-box p {
+  font-size: 14px;
+  color: #515151;
 }
 
+.error-msg-box.show {
+  display: flex;
+}
+/* ----------- */
 .form-content .form-input input {
   border: none;
   padding: 0;
