@@ -31,37 +31,22 @@
         </nav>
 
         <div class="form-content">
-          <h4>Forgot your password?</h4>
+          <h4>Verify your account</h4>
           <div class="inputs-container">
-            <div>
-              <label for="email"
-                >Email Address<span class="required-star">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="e.g: name@company.com"
-                id="email"
-              />
+            <p>We sent a verification code to <span>name@ejada.com</span></p>
+            <div class="otp-input-container">
+              <input type="text" class="otp-input" maxlength="1"/>
+              <input type="text" class="otp-input" maxlength="1"/>
+              <input type="text" class="otp-input" maxlength="1"/>
+              <input type="text" class="otp-input" maxlength="1"/>
             </div>
-            <div class="invalid-container">
-              <img
-                src="assets/icons/notification.svg"
-                alt="notification of an error icon"
-              />
-              <p>
-                We can’t seem to find the email you normally use. Resend using
-                the email you registered with
-              </p>
+            <div class="reset-container">
+              <p>Code will expire in <span>60</span> seconds</p>
+              <p>verification code is not received?, <span>Resend</span></p>
             </div>
           </div>
           <br />
-          <input
-            class="login-btn capital-text"
-            onclick="forgotPasswordValidation(), window.open('otp.html')"
-            type="submit"
-            value="Reset Password"
-          />
-
+          <button class="login-btn capital-text" onclick="">Submit</button>
           <div class="form-footer">
             <p>Back to<a href="login.html">Login</a></p>
             <div class="flex-row">
