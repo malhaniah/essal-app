@@ -11,7 +11,7 @@
   --ejada-text-color: #333333;
   --ejada-secondary-text-color: #666666;
   --ejada-error-text-color: #f8394a;
-  --ejada-error-background-color: #FFF5F6;
+  --ejada-error-background-color: #fff5f6;
   --ejada-success-text-color: #58bf96;
 }
 
@@ -86,13 +86,11 @@ body {
   color: var(--ejada-secondary-text-color);
 }
 
-.inputs-container input,
-.inputs-container .form-input {
-
+/* .inputs-container input,
+.inputs-container .form-input { */
 
 .form-content input,
 .form-input {
-
   width: 100%;
   border: 1px solid var(--ejada-main-color);
   border-radius: 7px;
@@ -146,7 +144,7 @@ body {
 
 .form-content .form-end {
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 10px;
   font-size: 14px;
   color: var(--ejada-secondary-text-color);
@@ -170,6 +168,7 @@ body {
   border: none;
   color: var(--white);
   margin-bottom: 50px;
+  margin-top: 30px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -195,7 +194,9 @@ body {
 .form-footer div {
   color: var(--ejada-main-color);
 }
-
+.form-footer span a {
+  text-decoration: none;
+}
 .form-footer div {
   gap: 10px;
 }
@@ -332,11 +333,11 @@ header {
 }
 
 /* Forgot Password */
-#email.active{
+#email.active {
   border: 1px solid var(--ejada-error-text-color);
 }
 
-.invalid-container{
+.invalid-container {
   background-color: var(--ejada-error-background-color);
   display: flex;
   align-items: center;
@@ -354,6 +355,31 @@ header {
   color: var(--ejada-error-text-color);
 }
 
-#email.active .invalid-container{
+#email.active .invalid-container {
   display: block !important;
+}
+
+/* -----reset password validation list  -----*/
+.validation-list ul li {
+  color: var(--ejada-success-text-color);
+  margin: 7px 0px;
+}
+.validation-list ul li img {
+  vertical-align: middle;
+  padding-right: 5px;
+  margin-top: -2px;
+}
+
+.validation-list ul li.error {
+  color: var(--ejada-error-text-color);
+}
+/* 
+.validation-list {
+  display: none;
+} */
+
+/* ---------------------- */
+
+.hide {
+  display: none;
 }

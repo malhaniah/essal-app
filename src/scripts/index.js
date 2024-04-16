@@ -9,7 +9,6 @@ function togglePassword() {
   }
 }
 
-
 // show error msg
 function validateInput() {
   const passwordInput = document.getElementById("password");
@@ -53,4 +52,22 @@ function forgotPasswordValidation() {
   }
 
   console.log(isValid);
+}
+
+// reset password validation
+function resetPassword() {
+  const inputContainer = document.getElementsByClassName("inputs-container")[0];
+  const errorIcon = document.querySelectorAll(".error-x");
+  const checkIcon = document.querySelectorAll("#check-icon");
+  const validateBox = document.querySelectorAll("#validate-box");
+  inputContainer.classList.add("error");
+  errorIcon.forEach((e) => {
+    e.classList.add("show");
+  });
+  checkIcon.forEach((e) => {
+    e.classList.add("hide");
+  });
+  validateBox.forEach((e) => {
+    e.classList.remove("hide");
+  });
 }
