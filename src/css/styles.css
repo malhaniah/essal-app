@@ -91,10 +91,8 @@ body {
   color: var(--ejada-secondary-text-color);
 }
 
-.inputs-container input,
-.inputs-container .form-input {
-  color: var(--ejada-text-color);
-}
+/* .inputs-container input,
+.inputs-container .form-input { */
 
 .form-content input,
 .form-input {
@@ -151,7 +149,7 @@ body {
 
 .form-content .form-end {
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 10px;
   font-size: 14px;
   color: var(--ejada-secondary-text-color);
@@ -175,6 +173,7 @@ body {
   border: none;
   color: var(--white);
   margin-bottom: 50px;
+  margin-top: 30px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -200,7 +199,9 @@ body {
 .form-footer div {
   color: var(--ejada-main-color);
 }
-
+.form-footer span a {
+  text-decoration: none;
+}
 .form-footer div {
   gap: 10px;
 }
@@ -371,7 +372,7 @@ header {
   font-weight: 600;
 }
 
-.reset-container  {
+.reset-container {
   text-align: center;
   line-height: 40px;
 }
@@ -406,4 +407,29 @@ header {
   100% {
     border-width: 3px;
   }
+}
+
+/* -----reset password validation list  -----*/
+.validation-list ul li {
+  color: var(--ejada-success-text-color);
+  margin: 7px 0px;
+}
+.validation-list ul li img {
+  vertical-align: middle;
+  padding-right: 5px;
+  margin-top: -2px;
+}
+
+.validation-list ul li.error {
+  color: var(--ejada-error-text-color);
+}
+/* 
+.validation-list {
+  display: none;
+} */
+
+/* ---------------------- */
+
+.hide {
+  display: none;
 }
