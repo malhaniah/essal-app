@@ -9,7 +9,6 @@ function togglePassword() {
   }
 }
 
-
 // show error msg
 function validateInput() {
   const passwordInput = document.getElementById("password");
@@ -54,3 +53,26 @@ function forgotPasswordValidation() {
 
   console.log(isValid);
 }
+
+function otpTransition() {
+  const otpInputs = document.querySelectorAll(".otp-input");
+
+  otpInputs.forEach((input) => {
+    if (input) {
+      otpInputs[0].focus();
+    }
+
+    if (input.value.length <= 0) {
+      input.textContent = "-";
+    }
+
+    input.addEventListener("keyup", (e) => {
+      if (e.key === "Backspace") {
+        input.previousElementSibling?.focus();
+      } else {
+        input.nextElementSibling?.focus();
+      }
+    });
+  });
+}
+otpTransition();
