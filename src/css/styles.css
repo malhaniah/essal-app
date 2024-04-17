@@ -440,3 +440,64 @@ header {
   font-size: 22px;
   color: var(--ejada-main-color);
 }
+.user-area .menu-icon {
+  display: none;
+}
+.menu-list-small {
+  display: none;
+}
+.body-bg {
+  display: none;
+}
+@media screen and (max-width: 1220px) {
+  .content-text h1 {
+    font-size: 48px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .content-text h6 {
+    font-size: 18px;
+  }
+
+  .user-area .menu-list li:nth-child(2),
+  .user-area .menu-list li:nth-child(3),
+  .user-area .menu-list li:nth-child(5) {
+    display: none;
+  }
+  .user-area .menu-icon {
+    display: block;
+  }
+  .start-menu,
+  .user-area {
+    flex: none;
+  }
+  .menu-list-small {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 70px;
+    min-height: 100vh;
+    background-color: rgb(232, 236, 238);
+    width: 250px;
+    /* display: block; */
+  }
+  .body-bg {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #1c1227d2;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .show {
+    display: block;
+  }
+  .menu-list-small li {
+    padding: 20px;
+  }
+  .menu-list-small li a:hover {
+    color: var(--ejada-secondary-color);
+  }
+}
