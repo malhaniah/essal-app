@@ -35,10 +35,10 @@
           <div class="inputs-container">
             <p>We sent a verification code to <span>name@ejada.com</span></p>
             <div class="otp-input-container">
-              <input type="text" class="otp-input" maxlength="1"/>
-              <input type="text" class="otp-input" maxlength="1"/>
-              <input type="text" class="otp-input" maxlength="1"/>
-              <input type="text" class="otp-input" maxlength="1"/>
+              <input type="text" class="otp-input" maxlength="1" />
+              <input type="text" class="otp-input" maxlength="1" />
+              <input type="text" class="otp-input" maxlength="1" />
+              <input type="text" class="otp-input" maxlength="1" />
             </div>
             <div class="reset-container">
               <p>Code will expire in <span>60</span> seconds</p>
@@ -46,7 +46,12 @@
             </div>
           </div>
           <br />
-          <button class="login-btn capital-text" onclick="">Submit</button>
+          <button
+            class="login-btn capital-text"
+            onclick="window.open('reset-password.html')"
+          >
+            Submit
+          </button>
           <div class="form-footer">
             <p>Back to<a href="login.html">Login</a></p>
             <div class="flex-row">
@@ -60,7 +65,7 @@
 
       <!-- big image side -->
       <div class="image-container">
-        <img src="assets/images/Layer_1.png" alt="" />
+        <img src="assets/svgs/digital_reailty.svg" alt="" />
       </div>
     </main>
     <script src="scripts/index.js"></script>
