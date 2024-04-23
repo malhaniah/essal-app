@@ -186,7 +186,9 @@ body {
 .capital-text {
   text-transform: uppercase;
 }
-
+.center-text {
+  text-align: center;
+}
 .form-footer {
   display: flex;
   flex-direction: column;
@@ -213,8 +215,8 @@ body {
 
 .image-container img {
   width: 100%;
-  margin: 150px auto;
-  padding: 50px;
+  margin: 0 auto;
+  padding: 0;
 }
 /* Header */
 header {
@@ -331,6 +333,48 @@ header {
   max-width: 100%;
 }
 
+.get-started {
+  display: flex;
+  gap: 1rem;
+  padding: 50px 0;
+}
+
+.filled,
+.outlined {
+  cursor: pointer;
+  padding: 12px 32px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 300ms ease-in-out;
+}
+
+.filled {
+  background-color: var(--ejada-main-color);
+  color: var(--white);
+}
+
+.filled:hover {
+  background: var(--ejada-secondary-color);
+  transform: scale(0.97);
+}
+
+.outlined {
+  background-color: transparent;
+  border: 2px solid var(--ejada-main-color);
+  color: var(--ejada-main-color);
+}
+
+.outlined:hover {
+  background-color: var(--ejada-secondary-color);
+  border-color: var(--ejada-secondary-color);
+  color: var(--white);
+  transform: scale(0.97);
+}
+
 @media screen and (min-width: 1200px) {
   .form-container {
     padding: 50px 130px;
@@ -365,6 +409,12 @@ header {
 }
 
 /* Password Reset OTP */
+
+.reset-container {
+  text-align: center;
+  line-height: 40px;
+  color: var(--ejada-secondary-text-color);
+}
 
 .inputs-container > p > span,
 .reset-container > p > span {
@@ -432,4 +482,93 @@ header {
 
 .hide {
   display: none;
+}
+
+.form-content .done-message {
+  font-size: 22px;
+  color: var(--ejada-main-color);
+}
+.user-area .menu-icon {
+  display: none;
+}
+.menu-list-small {
+  display: none;
+}
+.body-bg {
+  display: none;
+}
+@media screen and (max-width: 1220px) {
+  .content-text h1 {
+    font-size: 48px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .content-text h6 {
+    font-size: 18px;
+  }
+
+  .user-area .menu-list li:nth-child(2),
+  .user-area .menu-list li:nth-child(3),
+  .user-area .menu-list li:nth-child(5) {
+    display: none;
+  }
+  .user-area .menu-icon {
+    display: block;
+  }
+  .start-menu,
+  .user-area {
+    flex: none;
+  }
+  .menu-list-small {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 70px;
+    min-height: 100vh;
+    background-color: white;
+    width: 250px;
+    /* display: block; */
+  }
+  .body-bg {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #1c1227d2;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .show {
+    display: block;
+  }
+  .menu-list-small li {
+    padding: 20px;
+  }
+  .menu-list-small li a:hover {
+    color: var(--ejada-secondary-color);
+  }
+}
+
+
+/* Youmna's changes */
+.disabled{
+  color: var(--ejada-secondary-text-color) !important;
+}
+
+.otp-input input{
+  flex: 1;
+  width: 102px;
+  height: 94px;
+  background: var(--off-gray-color);
+  outline: none;
+  border: none !important;
+  font-size: 20px;
+  text-align: center;
+}
+ 
+.otp-input input:active,
+.otp-input input:focus-visible {
+  border: 2px solid var(--ejada-main-color) !important;
+  animation: Breathing 1s infinite;
 }

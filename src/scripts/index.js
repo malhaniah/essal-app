@@ -94,3 +94,25 @@ function resetPassword() {
     e.classList.remove("hide");
   });
 }
+
+// show menu in small screen
+
+function showMenu() {
+  const menuSideBar = document.querySelector(".menu-list-small");
+  const bodyBg = document.querySelector(".body-bg");
+  menuSideBar.classList.add("show");
+  bodyBg.classList.add("show");
+  console.log("test");
+}
+
+////////// hide side menu with click outside
+window.addEventListener("click", function (e) {
+  const menuSideBar = document.querySelector(".menu-list-small");
+  const menuIcon = document.querySelector(".menu-icon");
+  const bodyBg = document.querySelector(".body-bg");
+  if (!menuSideBar.contains(e.target) && !menuIcon.contains(e.target)) {
+    menuSideBar.classList.remove("show");
+    bodyBg.classList.remove("show");
+    menuIcon.classList.remove("hide");
+  }
+});
