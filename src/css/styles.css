@@ -209,14 +209,24 @@ body {
 }
 
 .image-container {
-  background-color: #f2f6ff;
+  /* background-color: #f2f6ff; */
   width: 100%;
+  position: relative;
 }
 
-.image-container img {
+.image-container > img {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  height: 100%;
+}
+.image-container .img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  margin: 100px auto;
+  padding: 30px;
 }
 /* Header */
 header {
@@ -550,13 +560,12 @@ header {
   }
 }
 
-
 /* Youmna's changes */
-.disabled{
+.disabled {
   color: var(--ejada-secondary-text-color) !important;
 }
 
-.otp-input input{
+.otp-input input {
   flex: 1;
   width: 102px;
   height: 94px;
@@ -566,7 +575,7 @@ header {
   font-size: 20px;
   text-align: center;
 }
- 
+
 .otp-input input:active,
 .otp-input input:focus-visible {
   border: 2px solid var(--ejada-main-color) !important;
