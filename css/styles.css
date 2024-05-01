@@ -590,8 +590,192 @@ header {
   color: var(--ejada-main-color) !important;
 }
 
-.login-link button:hover{
+.login-link button:hover {
   background: var(--ejada-secondary-color) !important;
   color: var(--white) !important;
   border-color: var(--ejada-secondary-color) !important;
 }
+
+/* ------------ start dashboard ----------------- */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+.dashboard-container .main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* -------start sidebar -------*/
+.dashboard-container .sidebar-container {
+  width: 290px;
+  min-height: 100%;
+  background-color: var(--ejada-main-color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+.dashboard-container .sidebar-container .logo {
+  text-align: center;
+}
+.dashboard-container .sidebar-container .logo img:first-child {
+  margin-bottom: 20px;
+}
+
+.dashboard-container .collapse-icon img {
+  position: absolute;
+  top: 108px;
+  left: 265px;
+  cursor: pointer;
+}
+
+/* ------for collapsed side bar  */
+.dashboard-container .collapsed-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  min-height: 100%;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 4px 0px 10px 0px #4040421f;
+  position: relative;
+}
+.dashboard-container .collapsed-sidebar .logo {
+  margin: 40px 0px;
+}
+.dashboard-container .collapsed-sidebar a {
+  padding: 7px 10px;
+}
+.dashboard-container .collapsed-sidebar a img {
+  vertical-align: middle;
+}
+.dashboard-container .collapsed-sidebar .collapsed-icon {
+  position: absolute;
+  top: 108px;
+  left: 75px;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+/* ------end collapsed side bar  */
+
+/* -----for sidebar active nav style  */
+.dashboard-container .sidebar-container .active-nav {
+  background-color: var(--white);
+  border-radius: 7px;
+  position: relative;
+}
+.dashboard-container .sidebar-container .active-nav p {
+  color: var(--ejada-main-color);
+}
+.dashboard-container .sidebar-container .active-nav img {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(44%) saturate(7468%)
+    hue-rotate(232deg) brightness(102%) contrast(118%);
+}
+.dashboard-container .sidebar-container .active-nav::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: var(--white);
+  left: -40px;
+  border-radius: 7px;
+}
+/* ------end sidebar active nav style----- */
+
+/* -----for collapsed sidebar active nav style  */
+.dashboard-container .collapsed-sidebar .collapsed-active-nav {
+  background-color: var(--ejada-main-color);
+  border-radius: 7px;
+  position: relative;
+}
+
+.dashboard-container .collapsed-sidebar .collapsed-active-nav img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(7452%)
+    hue-rotate(195deg) brightness(109%) contrast(111%);
+}
+.dashboard-container .collapsed-sidebar .collapsed-active-nav::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: var(--ejada-main-color);
+  left: -40px;
+  top: 0px;
+  border-radius: 7px;
+}
+/* ------end collapsed sidebar active nav style----- */
+
+.dashboard-container .sidebar-container .nav-list-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard-container .sidebar-container .nav-list-1 a {
+  color: var(--white);
+  justify-content: space-between;
+  padding: 15px 7px;
+  text-decoration: none;
+}
+.dashboard-container .sidebar-container .nav-list-1 a img {
+  margin-right: 8px;
+}
+.dashboard-container .sidebar-container .nav-list-1 a div {
+  gap: 10px;
+}
+
+.dashboard-container .sidebar-container .nav-list-2 {
+  margin-top: 60px;
+  border-top: 1px solid #ffffff;
+  padding-top: 13px;
+}
+.dashboard-container .sidebar-container .nav-list-2 a {
+  gap: 10px;
+  padding: 13px 5px;
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+}
+/* -------end sidebar -------*/
+
+/*------- start header ------*/
+.dashboard-container .header {
+  box-shadow: 0px 4px 10px 0px #4040421f;
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  color: var(--ejada-main-color);
+}
+
+.dashboard-container .header .user-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.dashboard-container .header .user-name {
+  gap: 10px;
+}
+.dashboard-container .header .user-name .user-img {
+  width: 40px;
+  height: 40px;
+}
+.dashboard-container .header .language {
+  gap: 10px;
+}
+/*------- end header ------*/
+.dashboard-container .dashboard-content {
+  padding: 30px;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* ------------ end dashboard ----------------- */
