@@ -582,3 +582,16 @@ header {
   border: 2px solid var(--ejada-main-color) !important;
   animation: Breathing 1s infinite;
 }
+
+/* Figma's changes */
+.login-link button {
+  background: transparent !important;
+  border: 2px solid var(--ejada-main-color) !important;
+  color: var(--ejada-main-color) !important;
+}
+
+.login-link button:hover{
+  background: var(--ejada-secondary-color) !important;
+  color: var(--white) !important;
+  border-color: var(--ejada-secondary-color) !important;
+}
