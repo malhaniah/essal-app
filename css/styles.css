@@ -226,7 +226,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  margin: 100px auto;
+  margin: -20px auto;
   padding: 30px;
 }
 /* Header */
@@ -291,7 +291,10 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
+.menu-item .flag-icon {
+  height: 20px;
+  width: 26px;
+}
 .menu-item .menu-link > button:hover {
   background: var(--ejada-secondary-color);
   transform: scale(0.97);
