@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div>
+        <div class="sidebar-container" id="sidebar-open">
+          <!-- menu collapse icon -->
+          <div class="collapse-icon" onclick="collapseSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/logo-white.svg" alt="ejada logo" />
+            <img src="../assets/icons/Vector 6.svg" alt="" />
+          </div>
+          <!----- first nav ----->
+          <div class="nav-list-1">
+            <a class="flex-row active-nav" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Home</p>
+              </div>
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Projects</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Programs</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Organization</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Budget</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Resources</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>My Portfolio</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Settings</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+          </div>
+          <!----- second nav ----->
+          <div class="nav-list-2">
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/wrench.svg" alt="" />
+              <p>Help & Support</p>
+            </a>
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/eye.svg" alt="" />
+              <p>Terms & Conditions</p>
+            </a>
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/file.svg" alt="" />
+              <p>Privacy Policies</p>
+            </a>
+          </div>
+        </div>
+        <!-- ----start collapsed sidebar-------- -->
+        <div class="collapsed-sidebar hide" id="sidebar-collapsed">
+          <!-- menu collapsed icon -->
+          <div class="collapsed-icon" onclick="openSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/Frame 1820547084.svg" alt="" />
+          </div>
+          <a href="#" class="collapsed-active-nav">
+            <img src="../assets/icons/Black.svg" alt=""
+          /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ------------ ---start dashboard header&content--- -->
+      <div class="main-container">
+        <!-- Start header  -->
+        <header class="header">
+          <span></span>
+          <div class="user-nav">
+            <div class="user-name flex-row">
+              <img
+                class="user-img"
+                src="../assets/images/Ellipse 10.png"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="../assets/icons/Shape.svg" alt="" />
+            </div>
+            <img src="../assets/icons/bell.svg" alt="" />
+            <img src="../assets/icons/Line 57.svg" alt="" />
+            <div class="language flex-row">
+              <img src="../assets/icons/world.svg" alt="" />
+              <p>English</p>
+              <img src="../assets/icons/Shape.svg" alt="" />
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="user-path">
+            <span class="inactive">Account Settings</span> <span> > </span>
+            <span class="active">User Groups</span>
+          </div>
+          <div class="user-list container">
+            <h4>Users Groups</h4>
+            <div class="filters">
+              <div class="search-container">
+                <img src="../assets/icons/grey_search.svg" />
+                <input type="text" placeholder="Search" />
+              </div>
+              <div class="functions">
+                <button>
+                  <img src="../assets/icons/export.svg" />
+                  <p>Export</p>
+                </button>
+                <button>
+                  <img src="../assets/icons/Add.svg" />
+                  <p>Create Group</p>
+                </button>
+              </div>
+            </div>
+            <div class="users-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 40px">
+                      <input type="checkbox" id="selectAllCheckbox" />
+                    </th>
+                    <!-- Checkbox to select all users -->
+                    <th>Group ID</th>
+                    <th>Group Name</th>
+                    <th>Group Admin</th>
+                    <th># of Users</th>
+                    <th>Date Created</th>
+                    <th>Descreption</th>
+                    <th>Status</th>
+                    <th></th>
+                    <!-- Empty header for options column -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1345</td>
+                    <td>Solution Architects</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 11.png" alt="" />
+                      Youssef Bagha
+                    </td>
+                    <td>322</td>
+                    <td>2024-04-28</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>2454</td>
+                    <td>Testers</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
+                      Sallab
+                    </td>
+                    <td>15</td>
+                    <td>2024-04-30</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>2454</td>
+                    <td>Product Owners</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 14.png" alt="" /> Karim
+                      Sallab
+                    </td>
+                    <td>15</td>
+                    <td>2024-04-30</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>2454</td>
+                    <td>Testers</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
+                      Sallab
+                    </td>
+                    <td>15</td>
+                    <td>2024-04-30</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>2454</td>
+                    <td>Testers</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
+                      Sallab
+                    </td>
+                    <td>15</td>
+                    <td>2024-04-30</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1345</td>
+                    <td>Solution Architects</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 11.png" alt="" />
+                      Youssef Bagha
+                    </td>
+                    <td>322</td>
+                    <td>2024-04-28</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1345</td>
+                    <td>Solution Architects</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 11.png" alt="" />
+                      Youssef Bagha
+                    </td>
+                    <td>322</td>
+                    <td>2024-04-28</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1345</td>
+                    <td>Solution Architects</td>
+                    <td class="flex-row table-img">
+                      <img src="../assets/images/Ellipse 11.png" alt="" />
+                      Youssef Bagha
+                    </td>
+                    <td>322</td>
+                    <td>2024-04-28</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+            <!------ table footer  ------>
+            <div class="table-footer flex-row">
+              <div class="flex-row">
+                <span>Display</span>
+                <div class="display-count">
+                  <span>12</span>
+                  <div>
+                    <img src="../assets/icons/Line 2.svg" alt="" />
+                    <img src="../assets/icons/Vector2.svg" alt="" />
+                  </div>
+                </div>
+                <span>12</span> results out of <span>250</span>
+              </div>
+
+              <div class="flex-row pagination-arrows">
+                <div class="">page <span>1</span> of <span>5</span></div>
+                <ul class="pagination-pages">
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img src="../assets/icons/Component 1.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img src="../assets/icons/arr-prev.svg" alt="" />
+                    </a>
+                  </li>
+                  <li><a href="#" class="page active">1</a></li>
+                  <li><a href="#" class="page">2</a></li>
+                  <li><a href="#" class="page">3</a></li>
+                  <li><a href="#" class="page">...</a></li>
+                  <li><a href="#" class="page">20</a></li>
+                  <li>
+                    <a href="#" class="prev">
+                      <img src="../assets/icons/arr-next.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="prev">
+                      <img src="../assets/icons/Component 2.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

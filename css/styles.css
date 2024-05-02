@@ -917,6 +917,7 @@ td.table-img {
   width: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .display-count div {
   display: flex;
@@ -1021,4 +1022,11 @@ td div.status-inactive::before {
   left: 18px;
   top: 7px;
   border-radius: 50%;
+}
+table td {
+  font-size: 14px;
+}
+table td:nth-child(2) {
+  color: var(--ejada-secondary-color);
+  text-decoration: underline;
 }
