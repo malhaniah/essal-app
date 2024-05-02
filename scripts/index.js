@@ -132,3 +132,45 @@ function openSidebar() {
   sidebar.classList.remove("hide");
   collapsedSidebar.classList.add("hide");
 }
+
+// // Random User Api
+// async function getRandomUser() {
+//   const response = await fetch("https://randomuser.me/api");
+//   const data = await response.json();
+//   return data.results[0];
+// }
+
+// async function appendUserData(numberOfUsers, arrayOfUsers, callBack) {
+//   for (let i = 0; i <= numberOfUsers; i++) {
+//     arrayOfUsers.push(await callBack());
+//   }
+// }
+
+// let users = [];
+
+// appendUserData(10, users, getRandomUser);
+
+// console.log(users)
+
+// function appendRow(list) {
+//   const tableBody = document.getElementById("tableBody");
+//   for (let index = 0; index < list.length; index++) {
+//     const tr = document.createElement("tr");
+//     const td = document.createElement("td");
+//     td.textContent = list[index];
+//     tr.appendChild(td);
+//     tableBody.appendChild(tr);
+//   }
+// }
+
+// appendRow(users);
+
+// JavaScript to handle select all checkbox functionality
+document
+  .getElementById("selectAllCheckbox")
+  .addEventListener("change", function () {
+    var checkboxes = document.getElementsByClassName("userCheckbox");
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = this.checked;
+    }
+  });

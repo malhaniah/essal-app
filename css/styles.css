@@ -703,6 +703,7 @@ header {
   align-items: center;
   box-shadow: 4px 0px 10px 0px #4040421f;
   position: relative;
+  transition: all 300ms ease-in;
 }
 .dashboard-container .collapsed-sidebar .logo {
   margin: 40px 0px;
@@ -726,6 +727,7 @@ header {
   background-color: var(--ejada-main-color);
   border-radius: 7px;
   position: relative;
+  transition: all 300ms ease-in;
 }
 
 .dashboard-container .collapsed-sidebar .collapsed-active-nav img {
@@ -782,3 +784,116 @@ header {
 }
 
 /* ------------ end dashboard ----------------- */
+
+/* ------------ Start Users list ----------------- */
+.user-path {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 35px;
+}
+
+.user-path span {
+  font-weight: 500;
+}
+
+.user-path .inactive {
+  color: var(--ejada-secondary-text-color);
+}
+
+.user-path .active {
+  color: var(--ejada-secondary-color);
+}
+
+.user-list.container > h4 {
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--ejada-main-color);
+}
+
+.user-list.container .filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.user-list.container .filters .search-container {
+  display: flex;
+  width: 280px;
+  height: 42px;
+  align-items: center;
+  border: 2px solid #949499;
+  border-radius: 7px;
+  padding: 8px 18px;
+}
+
+.user-list.container .filters .search-container input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #949499;
+}
+
+.user-list.container .filters .functions {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-list.container .filters .functions > button {
+  background:transparent;
+  color: var(--white);
+  padding: 12px 32px;
+  border: 1px solid var(--ejada-main-color);
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  color: var(--ejada-main-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-list.container .filters .functions > button:nth-child(even){
+  background-color: var(--ejada-main-color);
+  color: var(--white);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: separate; /* Separate borders between cells */
+  border-spacing: 0 10px; /* 10px spacing between rows, 0 spacing between columns */
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top; /* Align content to the top */
+}
+th {
+  background-color: #f2f2f2;
+  min-width: 40px; /* Set a minimum width for the first column */
+  min-height: 45px;
+}
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+/* td:first-child,
+th:first-child {
+  border-top-left-radius: 8px;
+}
+td:last-child,
+th:last-child {
+  border-top-right-radius: 8px;
+}
+tbody td:first-child {
+  border-bottom-left-radius: 8px;
+}
+tbody td:last-child {
+  border-bottom-right-radius: 8px;
+} */
+.options-column {
+  text-align: center;
+}
