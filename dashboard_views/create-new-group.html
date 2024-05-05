@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div>
+        <div class="sidebar-container" id="sidebar-open">
+          <!-- menu collapse icon -->
+          <div class="collapse-icon" onclick="collapseSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/logo-white.svg" alt="ejada logo" />
+            <img src="../assets/icons/Vector 6.svg" alt="" />
+          </div>
+          <!----- first nav ----->
+          <div class="nav-list-1">
+            <a class="flex-row active-nav" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Home</p>
+              </div>
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Projects</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Programs</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Organization</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Budget</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Resources</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>My Portfolio</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+            <a class="flex-row" href="#">
+              <div class="flex-row">
+                <img src="../assets/icons/setting.svg" alt="" />
+                <p>Settings</p>
+              </div>
+              <img src="../assets/icons/Vector.svg" alt="" />
+            </a>
+          </div>
+          <!----- second nav ----->
+          <div class="nav-list-2">
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/wrench.svg" alt="" />
+              <p>Help & Support</p>
+            </a>
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/eye.svg" alt="" />
+              <p>Terms & Conditions</p>
+            </a>
+            <a class="flex-row" href="#">
+              <img src="../assets/icons/file.svg" alt="" />
+              <p>Privacy Policies</p>
+            </a>
+          </div>
+        </div>
+        <!-- ----start collapsed sidebar-------- -->
+        <div class="collapsed-sidebar hide" id="sidebar-collapsed">
+          <!-- menu collapsed icon -->
+          <div class="collapsed-icon" onclick="openSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/Frame 1820547084.svg" alt="" />
+          </div>
+          <a href="#" class="collapsed-active-nav">
+            <img src="../assets/icons/Black.svg" alt=""
+          /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+          <a href="#"> <img src="../assets/icons/Black.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ------------ ---start dashboard header&content--- -->
+      <div class="main-container">
+        <!-- Start header  -->
+        <header class="header">
+          <span></span>
+          <div class="user-nav">
+            <div class="user-name flex-row">
+              <img
+                class="user-img"
+                src="../assets/images/Ellipse 10.png"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="../assets/icons/Shape.svg" alt="" />
+            </div>
+            <img src="../assets/icons/bell.svg" alt="" />
+            <img src="../assets/icons/Line 57.svg" alt="" />
+            <div class="language flex-row">
+              <img src="../assets/icons/world.svg" alt="" />
+              <p>English</p>
+              <img src="../assets/icons/Shape.svg" alt="" />
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="user-path">
+            <span class="inactive">Account Settings</span> <span> > </span>
+            <span class="inactive">User Groups</span> <span> > </span>
+            <span class="active">Create User Group</span>
+          </div>
+          <div class="head-function flex-row">
+            <h4 class="head-text">Users Groups</h4>
+            <div class="functions-list flex-row">
+              <a href="#"
+                ><img src="../assets/icons/document.png" alt="" /> Back to
+                List</a
+              >
+              <button class="primary-btn">
+                <img src="../assets/icons/Export2.svg" alt="" /> Delete
+              </button>
+              <button class="primary-btn">
+                <img src="../assets/icons/Export2.svg" alt="" /> Clone
+              </button>
+              <button class="secondary-btn">
+                <img src="../assets/icons/Add.svg" alt="" /> Save Changes
+              </button>
+            </div>
+          </div>
+          <!-- ----start details box ------>
+          <div class="details-box card-container">
+            <h4>Details</h4>
+            <p>Customize the name and description of your group</p>
+            <div class="flex-row form-inputs">
+              <div class="flex-col">
+                <label for=""
+                  >Group Name<span class="required-star">*</span></label
+                >
+                <input class="input" type="text" placeholder="Placeholder" />
+              </div>
+              <div class="flex-col">
+                <label for=""
+                  >Group Admin<span class="required-star">*</span></label
+                >
+                <div class="group-admin-box flex-row">
+                  <input class="input" type="text" value="Typing|" />
+                  <div class="secondary-btn">Add</div>
+                  <div class="show-result">
+                    Admin Name <img src="../assets/icons/x.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-col">
+                <label for="">Status<span class="required-star">*</span></label>
+                <div class="input-container input">
+                  <input type="text" placeholder="Placeholder" />
+                  <img src="../assets/icons/copy.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="description-box">
+              <label for="">
+                Description <span class="optional-text">(Optional)</span></label
+              >
+              <div>
+                <textarea name="" id="" placeholder="Placeholder"></textarea>
+              </div>
+              <div class="textarea-foot">
+                <p>Helper text goes here</p>
+                <p>0/50</p>
+              </div>
+            </div>
+          </div>
+          <!-- ----end details box ------>
+          <div class="users-box card-container">
+            <h4>Users</h4>
+            <p>
+              Add or remove users from this group, Once users are a part of this
+              group. you can customize the action cards and push notifications
+              they see.
+            </p>
+          </div>
+        </div>
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

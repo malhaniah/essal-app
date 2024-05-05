@@ -1030,3 +1030,154 @@ table td:nth-child(2) {
   color: var(--ejada-secondary-color);
   text-decoration: underline;
 }
+
+/* ------ start create new user group----- */
+.head-function {
+  justify-content: space-between;
+}
+.head-function > h4 {
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--ejada-main-color);
+}
+
+.functions-list {
+  gap: 10px;
+}
+.functions-list a {
+  text-decoration: none;
+  color: var(--ejada-main-color);
+}
+.primary-btn {
+  background: transparent;
+  color: var(--white);
+  padding: 10px 20px;
+  border: 1px solid var(--ejada-main-color);
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  color: var(--ejada-main-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.secondary-btn {
+  color: var(--white);
+  padding: 10px 20px;
+  border: 1px solid var(--ejada-main-color);
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--ejada-main-color);
+  color: var(--white);
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  padding: 20px;
+  border: 1px solid #d1d4d4;
+  border-radius: 7px;
+  margin: 30px 0px;
+}
+.card-container > h4 {
+  color: var(--ejada-main-color);
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  border: none;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.details-box .form-inputs {
+  margin-top: 40px;
+  width: 100%;
+  gap: 15px;
+}
+
+.details-box .form-inputs > div {
+  width: 100%;
+}
+.details-box .form-inputs div .secondary-btn {
+  padding: 9px 15px;
+  margin-left: 5px;
+}
+.details-box .form-inputs .input {
+  border: 1px solid #a3a3a8;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+/*---- result in group admin box ---- */
+.details-box .group-admin-box {
+  position: relative;
+}
+.details-box .group-admin-box .show-result {
+  font-size: 12px;
+  position: absolute;
+  top: 45px;
+  background-color: #f2f4ff;
+  padding: 2px 5px;
+  border-radius: 7px;
+}
+.details-box .group-admin-box .show-result img {
+  vertical-align: middle;
+}
+.details-box .description-box {
+  margin-top: 30px;
+  width: 360px;
+  position: relative;
+}
+.details-box .description-box .optional-text {
+  font-size: 12px;
+  color: var(--ejada-secondary-text-color);
+}
+.details-box .description-box textarea {
+  border: 1px solid #a3a3a8;
+  border-radius: 7px;
+  margin-top: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100px;
+  width: 100%;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+.textarea-foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--ejada-secondary-text-color);
+}
+.textarea-foot p:last-child {
+  color: #a3a3a8;
+}
+.details-box .description-box textarea::-webkit-scrollbar {
+  background-color: #ffffff;
+  width: 8px;
+}
+
+.details-box .description-box textarea::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #a3a3a8;
+  border: 3px solid #ffffff;
+}
+.details-box .description-box::after {
+  position: absolute;
+  content: url(../assets/icons/copy.png);
+  top: 30px;
+  right: 10px;
+}
+
+/* ------ end create new user group----- */
