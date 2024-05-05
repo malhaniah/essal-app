@@ -1180,4 +1180,112 @@ textarea:focus {
   right: 10px;
 }
 
+.users-utilities {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.available-users,
+.group-users {
+  min-width: 650px;
+  min-height: 460px;
+  border: 1px solid #d1d4d4;
+  border-radius: 7px;
+  padding: 15px 25px;
+  margin-top: 20px;
+}
+
+.available-users > div,
+.group-users > div {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.available-users > div > div,
+.group-users > div > div {
+  display: flex;
+  gap: 10px;
+}
+
+.available-users > div > div > p,
+.group-users > div > div > p {
+  color: var(--ejada-main-color);
+  font-size: 18px;
+}
+
+.available-users > div > p,
+.group-users > div > p {
+  color: var(--ejada-secondary-text-color);
+}
+
+.available-input {
+  margin: 10px 0;
+  min-width: 621px;
+  border-radius: 7px;
+  padding-left: 16px;
+  min-height: 48px;
+  display: flex;
+  border: 1px solid #d1d4d4;
+}
+
+.available-input input {
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+.users-data {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+}
+
+.user {
+  display: flex;
+  padding: 15px 9px;
+}
+
+.user:nth-child(even) {
+  background: #f3f7ff;
+}
+
+.user > div:nth-child(even) > h6 {
+  font-size: 16px;
+  color: #404042;
+}
+
+.user > div:nth-child(even) > p {
+  color: #404042;
+  font-size: 14px;
+}
+
+.users-options {
+  display: flex;
+  padding: 0 25px;
+  height: 50vh;
+  gap: 1rem;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.users-options button {
+  width: 132px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 7px;
+  background: var(--ejada-main-color);
+  color: #fff;
+  border: none;
+}
+
+.users-options button:nth-child(even) {
+  background-color: transparent;
+  border: 1px solid var(--ejada-main-color);
+  color: var(--ejada-main-color);
+}
 /* ------ end create new user group----- */
