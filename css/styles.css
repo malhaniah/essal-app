@@ -1087,14 +1087,14 @@ table td:nth-child(2) {
   color: var(--ejada-main-color);
   margin-bottom: 10px;
 }
-
-.input-container input {
-  border: none;
-}
 .input-container {
   display: flex;
   justify-content: space-between;
 }
+.input-container input {
+  border: none;
+}
+
 .details-box .form-inputs {
   margin-top: 40px;
   width: 100%;
@@ -1154,6 +1154,7 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+
 .textarea-foot {
   display: flex;
   justify-content: space-between;
@@ -1276,7 +1277,7 @@ textarea:focus {
 
 .users-options {
   display: flex;
-  padding: 0 25px;
+  padding: 0 20px;
   height: 50vh;
   gap: 1rem;
   justify-content: center;
@@ -1301,4 +1302,25 @@ textarea:focus {
   border: 1px solid var(--ejada-main-color);
   color: var(--ejada-main-color);
 }
+
 /* ------ end create new user group----- */
+/* ------ start create new user ----- */
+.head-function .functions-container {
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.head-function .functions-container .search-box {
+  border: 1px solid #949499;
+  padding: 10px;
+  border-radius: 7px;
+  width: 250px;
+  gap: 10px;
+}
+.head-function .functions-container .search-box input {
+  border: none;
+  /* width: 100%; */
+}
+.head-function .functions-container .search-box input:focus {
+  outline: none;
+}
+/* ------ end create new user ----- */
