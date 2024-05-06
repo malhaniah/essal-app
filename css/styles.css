@@ -1154,6 +1154,11 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+.details-box .input:focus,
+.details-box textarea:focus {
+  outline: var(--ejada-main-color);
+  border: 1px solid var(--ejada-main-color) !important;
+}
 
 .textarea-foot {
   display: flex;
