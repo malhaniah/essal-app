@@ -1180,15 +1180,21 @@ textarea:focus {
   right: 10px;
 }
 
+.users-box {
+  max-width: 100%;
+}
+
 .users-utilities {
+  overflow: hidden;
   display: flex;
   align-items: start;
   gap: 1rem;
+  position: relative;
 }
 
 .available-users,
 .group-users {
-  min-width: 650px;
+  min-width: 450px;
   min-height: 460px;
   border: 1px solid #d1d4d4;
   border-radius: 7px;
@@ -1196,11 +1202,18 @@ textarea:focus {
   margin-top: 20px;
 }
 
-.available-users > div,
-.group-users > div {
+.available-users > div:first-child,
+.group-users > div:first-child {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+}
+
+.available-users > div > div > img,
+.group-users > div > div > img {
+  max-width: 20%;
 }
 
 .available-users > div > div,
@@ -1222,7 +1235,7 @@ textarea:focus {
 
 .available-input {
   margin: 10px 0;
-  min-width: 621px;
+  max-width: 100%;
   border-radius: 7px;
   padding-left: 16px;
   min-height: 48px;
