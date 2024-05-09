@@ -992,16 +992,19 @@ td div.status-active {
   padding-right: 15px;
   color: #0c7945;
   position: relative;
-  width: 100px;
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 td div.status-active::before {
   content: "";
   width: 15px;
   height: 15px;
   background-color: #4bc181;
-  position: absolute;
+  /* position: absolute;
   left: 15px;
-  top: 7px;
+  top: 7px; */
   border-radius: 50%;
 }
 td div.status-inactive {
@@ -1013,15 +1016,18 @@ td div.status-inactive {
   color: #59595c;
   position: relative;
   width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 td div.status-inactive::before {
   content: "";
   width: 15px;
   height: 15px;
   background-color: #a3a3a8;
-  position: absolute;
+  /* position: absolute;
   left: 18px;
-  top: 7px;
+  top: 7px; */
   border-radius: 50%;
 }
 table td {
