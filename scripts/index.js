@@ -106,16 +106,16 @@ function showMenu() {
 }
 
 ////////// hide side menu with click outside
-window.addEventListener("click", function (e) {
-  const menuSideBar = document.querySelector(".menu-list-small");
-  const menuIcon = document.querySelector(".menu-icon");
-  const bodyBg = document.querySelector(".body-bg");
-  if (!menuSideBar.contains(e.target) && !menuIcon.contains(e.target)) {
-    menuSideBar.classList.remove("show");
-    bodyBg.classList.remove("show");
-    menuIcon.classList.remove("hide");
-  }
-});
+// window.addEventListener("click", function (e) {
+//   const menuSideBar = document.querySelector(".menu-list-small");
+//   const menuIcon = document.querySelector(".menu-icon");
+//   const bodyBg = document.querySelector(".body-bg");
+//   if (!menuSideBar.contains(e.target) && !menuIcon.contains(e.target)) {
+//     menuSideBar.classList.remove("show");
+//     bodyBg.classList.remove("show");
+//     menuIcon.classList.remove("hide");
+//   }
+// });
 
 //////////////////////////////////////////
 // sidebar menu toggle
@@ -174,3 +174,79 @@ document
       checkboxes[i].checked = this.checked;
     }
   });
+
+/* Pagination mechanism */
+
+// Classes
+let classActive = "active";
+let classInactive = "inactive";
+let classDisabled = "disabled";
+
+// Components
+const paginationList = document.querySelectorAll(".pagination-pages .page");
+const previousButtons = [
+  ...document.querySelectorAll(".pagination-pages .prev"),
+];
+const nextButtons = [...document.querySelectorAll(".pagination-pages .next")];
+const activePage = document.querySelector(".active-page");
+
+// Set total pages
+const totalPages = document.querySelector(".total-pages");
+totalPages.textContent = paginationList[paginationList.length - 1].textContent;
+
+function paginate(paginationList) {
+  paginationList.forEach((page) => {
+    page.addEventListener("click", (e) => {
+      paginationList.forEach((page) => {
+        page.classList.remove(classActive);
+        page.classList.add(classInactive);
+      });
+      e.target.classList.remove(classInactive);
+      e.target.classList.add(classActive);
+
+      let pageValue = parseInt(e.target.textContent);
+
+      if (pageValue > 1) {
+        previousButtons.forEach((button) => {
+          button.classList.remove(classDisabled);
+        });
+      } else {
+        previousButtons.forEach((button) => {
+          button.classList.add(classDisabled);
+        });
+      }
+
+      if (pageValue < paginationList.length) {
+        nextButtons.forEach((button) => {
+          button.classList.remove(classDisabled);
+        });
+      } else {
+        nextButtons.forEach((button) => {
+          button.classList.add(classDisabled);
+        });
+      }
+
+      if (isNaN(pageValue)) {
+        nextButtons.forEach((button) => {
+          button.classList.remove(classDisabled);
+        });
+        previousButtons.forEach((button) => {
+          button.classList.remove(classDisabled);
+        });
+      }
+
+      // Set active page
+      activePage.textContent = e.target.textContent;
+    });
+  });
+}
+
+paginate(paginationList);
+
+// Display results
+const activeResult = document.querySelector(".active-result");
+const displayCount = document.querySelector(".display-count");
+
+displayCount.addEventListener("change", (e) => {
+  activeResult.textContent = e.target.value;
+});

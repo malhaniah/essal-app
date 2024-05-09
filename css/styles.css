@@ -913,6 +913,7 @@ td.table-img {
 .display-count {
   border: 1px solid #d1d4d4;
   border-radius: 10px;
+  background: transparent;
   padding: 3px 8px;
   width: 60px;
   display: flex;
