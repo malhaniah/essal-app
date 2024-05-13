@@ -1129,6 +1129,11 @@ th {
 tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
+
+tr {
+  position: relative;
+}
+
 /* td:first-child,
 th:first-child {
   border-top-left-radius: 8px;
@@ -1144,78 +1149,85 @@ tbody td:last-child {
   border-bottom-right-radius: 8px;
 } */
 
-.users-table {
-  position: relative;
-}
+
 .options-column {
-  width: 50px;
-  height: 50px;
+  position: relative;
   text-align: center;
 }
-.users-table > .tooltip-container.active {
-  display: block ;
-}
 
-.users-table > .tooltip-container {
-  position: absolute;
-  display: none;
-  right: 50px;
-  z-index: 999;
-  box-shadow: 0 0 20px 10px rgba(64, 64, 66, 0.102);
-  border-radius: 10px !important;
-}
-
-.users-table  > .tooltip-container > .tooltip-menu {
-  width: 140px;
-  height: fit-content;  
-  background: var(--white);
-  border-radius: 10px !important;
+.options-column > .options-container {
   position: relative;
+  display: inline-block;
+  z-index: 9999;
 }
 
-.users-table > .tooltip-container > .tooltip-menu::after {
+
+.options-menu {
+  position: absolute; /* Position the menu absolutely */
+  top: calc(100% - 30px); /* Position the menu below the options column */
+  left: 50%; /* Position the menu horizontally centered */
+  transform: translateX(-110%); /* Center the menu horizontally */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide the menu by default */
+}
+
+.options-menu::after{
   content: "";
   position: absolute;
-  top: 15px;
-  right: 0px;
-  width: 30px;
-  height: 30px;
-  rotate: 45deg;
+  top: 10%;
+  right: -5px ;
+  width: 20px;
+  height: 20px;
   background: var(--white);
-  z-index: -1;
+  rotate: 45deg;
+  z-index: -1 !important;
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul {
+.options-column.active .options-menu  {
+  display: block;
+}
+
+.options-column > .options-container > .options-menu > ul {
   list-style: none;
   display: flex;
   flex-flow: column nowrap;
   align-items: start;
+  z-index: 99;
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul > li {
+.options-column > .options-container > .options-menu > ul > li {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: left;
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul > li > a {
+.options-column > .options-container > .options-menu > ul > li > a {
   text-decoration: none;
   color: var(--ejada-secondary-color);
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul > li:hover {
+.options-column > .options-container > .options-menu > ul > li:hover {
   background: #e6e8e8;
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul > li:first-child {
+.options-column > .options-container > .options-menu > ul > li:first-child {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.users-table  > .tooltip-container > .tooltip-menu > ul > li:last-child {
+.options-column > .options-container > .options-menu > ul > li:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+.options-column > .active-btn{
+  border: none;
+  background: transparent;
+}
+
+
 
 td.table-img {
   gap: 10px;
@@ -1290,15 +1302,15 @@ td.table-img {
 }
 
 /* ------------table scrollbar -----------*/
-.users-table {
+.options-column {
   max-height: 500px;
   overflow-y: scroll;
 }
-.users-table::-webkit-scrollbar {
+.options-column::-webkit-scrollbar {
   background-color: #f2f2f2;
   width: 9px;
 }
-.users-table::-webkit-scrollbar-thumb {
+.options-column::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #a3a3a8;
   border: 3px solid #f2f2f2;

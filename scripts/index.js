@@ -21,42 +21,30 @@ function toggleDropdown() {
     });
   });
 }
-function toggleToolTipMenuOnTable(e) {
-  // Ensure the event and tooltip container exist
-  if (!e) {
-    console.error("Event object is not provided.");
-    return;
-  }
+function toggleToolTipMenuOnTable() {
+  var optionsColumns = document.querySelectorAll(".options-column");
+  optionsColumns.forEach(function (column) {
+    column.addEventListener("click", function (event) {
+      var activeMenu = document.querySelector(".options-column.active");
+      if (activeMenu && activeMenu !== this) {
+        activeMenu.classList.remove("active");
+      }
+      this.classList.toggle("active");
+      event.stopPropagation(); // Prevent click event from bubbling to parent elements
+    });
+  });
 
-  const toolTipContainer = document.getElementById("tooltip");
-  if (!toolTipContainer) {
-    console.error("Tooltip container not found.");
-    return;
-  }
-
-  // Update tooltip position and make it active
-  toolTipContainer.classList.add("active");
-
-  // Ensure the target element (related to the event) exists
-  const target = e;
-  if (!target) {
-    console.error("Target element not found.");
-    return;
-  }
-
-  if (target !== target) {
-    toolTipContainer.classList.remove("active");
-  }
-
-  // Increase the offset based on the current top position
-  const currentTop = parseInt(toolTipContainer.style.top) || 0;
-  let offsetIncrease = 10; // You can adjust the amount by which the offset increases
-
-  offsetIncrease++;
-
-  toolTipContainer.style.top = target.offsetTop * offsetIncrease + "px";
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    var isOptionsMenu = event.target.closest(".options-menu");
+    if (!isOptionsMenu) {
+      var activeMenu = document.querySelector(".options-column.active");
+      if (activeMenu) {
+        activeMenu.classList.remove("active");
+      }
+    }
+  });
 }
-
 function togglePassword() {
   const passwordInput = document.getElementById("password");
   // Ensure the password input element exists before attempting to use it
@@ -397,6 +385,7 @@ function toggleToolTipMenu() {
 }
 
 // Invoke function
+toggleToolTipMenuOnTable();
 otpTransition();
 toggleDropdown();
 toggleToolTipMenu();
