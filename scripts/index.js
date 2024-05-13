@@ -35,13 +35,17 @@ function toggleToolTipMenuOnTable(e) {
   }
 
   // Update tooltip position and make it active
-  toolTipContainer.classList.toggle("active");
+  toolTipContainer.classList.add("active");
 
   // Ensure the target element (related to the event) exists
   const target = e;
   if (!target) {
     console.error("Target element not found.");
     return;
+  }
+
+  if (target !== target) {
+    toolTipContainer.classList.remove("active");
   }
 
   // Increase the offset based on the current top position
