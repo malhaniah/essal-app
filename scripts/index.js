@@ -2,6 +2,7 @@
 function toggleDropdown() {
   // Query all list items and links within the navigation list
   const listItem = document.querySelectorAll(".nav-container .nav-list li");
+  console.log(listItem);
   const listLink = [
     ...document.querySelectorAll(".nav-container .nav-list li a"),
   ];
@@ -319,47 +320,21 @@ function displayResults() {
   }
 }
 
-function updateActiveItemBetweenTwoList() {
+function updateActiveClassItem() {
   // Side menu toggle
   const menuActiveClass = "active-nav";
 
-  const sideMenuItem = Array.from(document.querySelectorAll(".nav-list a"));
-  const collapsedSideBar = Array.from(
-    document.querySelectorAll(".collapsed-sidebar a")
-  );
+  const sideMenuItem = Array.from(
+    document.querySelectorAll(".nav-list li:not(.sub-item)")
+  ).filter((item) => !item.classList.contains(menuActiveClass));
 
-  // Ensure that the length of the arrays are the same to prevent index out of bounds
-  if (sideMenuItem.length !== collapsedSideBar.length) {
-    console.error(
-      "The number of items in the opened and closed lists are not equal."
-    );
-    return;
-  }
-
-  const openedList = sideMenuItem.slice(-7); // Get the last 7 items
-  const closedList = collapsedSideBar;
-
-  openedList.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      // Clear active class from all items
-      openedList.forEach((item) => item.classList.remove(menuActiveClass));
-      closedList.forEach((item) => item.classList.remove(menuActiveClass));
-
-      // Toggle active class on clicked items
-      openedList[index].classList.add(menuActiveClass);
-      closedList[index].classList.add(menuActiveClass);
-    });
-  });
-
-  closedList.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      // Clear active class from all items
-      openedList.forEach((item) => item.classList.remove(menuActiveClass));
-      closedList.forEach((item) => item.classList.remove(menuActiveClass));
-
-      // Toggle active class on clicked items
-      openedList[index].classList.add(menuActiveClass);
-      closedList[index].classList.add(menuActiveClass);
+  sideMenuItem.forEach((item) => {
+    if (item.classList.contains(menuActiveClass)) {
+      item.classList.remove(menuActiveClass);
+    }
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.target.classList.toggle(menuActiveClass);
     });
   });
 }
@@ -389,7 +364,7 @@ toggleToolTipMenuOnTable();
 otpTransition();
 toggleDropdown();
 toggleToolTipMenu();
-updateActiveItemBetweenTwoList();
+updateActiveClassItem();
 paginate();
 selectItemsOnTable();
 displayResults();
