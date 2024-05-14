@@ -998,7 +998,7 @@ header {
 
 .dashboard-container .header .tooltip-menu ul li a {
   text-decoration: none;
-  color: var(--ejada-main-color);
+  color: #525dc1;
 }
 
 .dashboard-container .header .tooltip-menu ul li:hover a {
@@ -1075,6 +1075,43 @@ header {
   color: #949499;
 }
 
+.user-list.container .filters .utilities {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-list.container .filters .utilities .filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--ejada-main-color);
+  transition: all 0.3s ease;
+  color: var(--ejada-main-color);
+}
+
+.user-list.container .filters .utilities .filter-btn div {
+  width: 1.3px;
+  height: 23px;
+  background: var(--ejada-main-color);
+}
+
+.user-list.container .filters .utilities .filter-btn .filters-used {
+  border-radius: 1rem;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ejada-main-color);
+  color: var(--white);
+}
+
 .user-list.container .filters .functions {
   display: flex;
   gap: 1rem;
@@ -1149,6 +1186,32 @@ tbody td:last-child {
   border-bottom-right-radius: 8px;
 } */
 
+.group {
+  border-radius: 20px;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+.group.a-group {
+  background: #c7e3d2;
+}
+
+.group.b-group {
+  background: #b3dfef;
+}
+
+.group-assigned {
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  border-radius: 20px;
+  color: var(--white);
+  padding: 1px 4px 1px 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #a3a3a8;
+}
 
 .options-column {
   position: relative;
@@ -1161,23 +1224,24 @@ tbody td:last-child {
   z-index: 9999;
 }
 
-
 .options-menu {
+  min-width: 150px;
+  min-height: fit-content;
   position: absolute; /* Position the menu absolutely */
   top: calc(100% - 30px); /* Position the menu below the options column */
   left: 50%; /* Position the menu horizontally centered */
   transform: translateX(-110%); /* Center the menu horizontally */
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   display: none; /* Hide the menu by default */
 }
 
-.options-menu::after{
+.options-menu::after {
   content: "";
   position: absolute;
   top: 10%;
-  right: -5px ;
+  right: -5px;
   width: 20px;
   height: 20px;
   background: var(--white);
@@ -1185,7 +1249,7 @@ tbody td:last-child {
   z-index: -1 !important;
 }
 
-.options-column.active .options-menu  {
+.options-column.active .options-menu {
   display: block;
 }
 
@@ -1199,13 +1263,17 @@ tbody td:last-child {
 
 .options-column > .options-container > .options-menu > ul > li {
   width: 100%;
-  padding: 10px 30px;
+  position: relative;
   text-align: left;
+  border-bottom: 1px solid #e6e8e8;
 }
 
 .options-column > .options-container > .options-menu > ul > li > a {
+  width: 100%;
+  padding: 10px 30px;
+  display: block;
   text-decoration: none;
-  color: var(--ejada-secondary-color);
+  color: #525dc1;
 }
 
 .options-column > .options-container > .options-menu > ul > li:hover {
@@ -1222,12 +1290,10 @@ tbody td:last-child {
   border-bottom-right-radius: 10px;
 }
 
-.options-column > .active-btn{
+.options-column > .active-btn {
   border: none;
   background: transparent;
 }
-
-
 
 td.table-img {
   gap: 10px;

@@ -22,10 +22,10 @@ function toggleDropdown() {
   });
 }
 function toggleToolTipMenuOnTable() {
-  var optionsColumns = document.querySelectorAll(".options-column");
+  const optionsColumns = document.querySelectorAll(".options-column");
   optionsColumns.forEach(function (column) {
     column.addEventListener("click", function (event) {
-      var activeMenu = document.querySelector(".options-column.active");
+      const activeMenu = document.querySelector(".options-column.active");
       if (activeMenu && activeMenu !== this) {
         activeMenu.classList.remove("active");
       }
@@ -36,9 +36,9 @@ function toggleToolTipMenuOnTable() {
 
   // Close menu when clicking outside
   document.addEventListener("click", function (event) {
-    var isOptionsMenu = event.target.closest(".options-menu");
+    const isOptionsMenu = event.target.closest(".options-menu");
     if (!isOptionsMenu) {
-      var activeMenu = document.querySelector(".options-column.active");
+      const activeMenu = document.querySelector(".options-column.active");
       if (activeMenu) {
         activeMenu.classList.remove("active");
       }
@@ -212,8 +212,8 @@ function selectItemsOnTable() {
   document
     .getElementById("selectAllCheckbox")
     .addEventListener("change", function () {
-      var checkboxes = document.getElementsByClassName("userCheckbox");
-      for (var i = 0; i < checkboxes.length; i++) {
+      const checkboxes = document.getElementsByClassName("userCheckbox");
+      for (const i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = this.checked;
       }
     });
