@@ -1435,10 +1435,10 @@ td.table-img {
 table td {
   font-size: 14px;
 }
-table td:nth-child(2) {
+/* table td:nth-child(2) {
   color: var(--ejada-secondary-color);
   text-decoration: underline;
-}
+} */
 
 /* ------ start create new user group----- */
 .head-function {
