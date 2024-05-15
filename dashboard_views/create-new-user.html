@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejada Portfolio Management Dashboard</title>
+    <title>Ejada Portfolio Management | Users List</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <div class="dashboard-container">
       <!-- ---Start sidebar menu --- -->
       <div>
@@ -17,16 +20,19 @@
           </div>
           <div class="logo">
             <img src="../assets/images/logo-white.svg" alt="ejada logo" />
-            <img src="../assets/icons/horizontal-line.svg" alt="" />
+            <img src="../assets/icons/horizontal-line.svg" />
           </div>
           <!----- first nav ----->
-
           <nav class="nav-container">
             <ul class="nav-list">
-              <li>
+              <li class="active">
                 <div class="sub-item">
                   <div class="sub-item">
                     <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
                     <a href="#">Home</a>
                   </div>
                 </div>
@@ -233,8 +239,12 @@
           <a href="#">
             <img src="../assets/icons/settings-wheel.svg" alt=""
           /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
         </div>
       </div>
+
       <!-- ---End side bar menu --- -->
       <!-- ------------ ---start dashboard header&content--- -->
       <div class="main-container">
@@ -242,21 +252,47 @@
         <header class="header">
           <span></span>
           <div class="user-nav">
-            <div class="user-name flex-row">
+            <div class="user-name flex-row user-profile tooltip-btn">
               <img
                 class="user-img"
-                src="../assets/images/profile-pic.png"
+                src="../assets/images/default.svg"
                 alt="user image"
               />
               <h4>Nadine Hafez</h4>
-              <img src="../assets/icons/arrow-down.svg" alt="" />
+              <img src="../assets/icons/arrow-down.svg" />
             </div>
-            <img src="../assets/icons/bell.svg" alt="" />
-            <img src="../assets/icons/line.svg" alt="" />
+            <img src="../assets/icons/bell.svg" />
+            <img src="../assets/icons/line.svg" />
             <div class="language flex-row">
-              <img src="../assets/icons/world.svg" alt="" />
+              <img src="../assets/icons/world.svg" />
               <p>English</p>
-              <img src="../assets/icons/arrow-down.svg" alt="" />
+              <img src="../assets/icons/arrow-down.svg" />
+            </div>
+          </div>
+          <div class="tooltip-container">
+            <div class="tooltip-menu">
+              <ul>
+                <li>
+                  <img src="../assets/icons/user.svg" />
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/organization.svg" />
+                  <a href="#"> My Organization</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/help.svg" />
+                  <a href="#">Help Center</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/faq.svg" />
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/logout.svg" />
+                  <a href="#">Log out</a>
+                </li>
+              </ul>
             </div>
           </div>
         </header>
@@ -267,35 +303,32 @@
             <span class="inactive">Account Settings</span> <span> > </span>
             <span class="active">Create New User</span>
           </div>
-          <div class="head-function">
-            <h4 class="head-text">Create New User</h4>
-            <div class="flex-row functions-container">
-              <div class="search-box flex-row">
-                <img src="../assets/icons/search-gray.png" alt="" />
-                <input type="text" placeholder="Search" />
+          <div class="user-list container">
+            <h4>Create New User</h4>
+            <div class="filters">
+              <div class="tabs-container">
+                <span class="active-tab">General</span>
+                <span>Groups</span>
+                <span>Projects</span>
+                <span>Working time</span>
+                <span>Avatar</span>
               </div>
-              <div class="functions-list flex-row">
-                <a href="#"
-                  ><img src="../assets/icons/document.png" alt="" /> Back to
-                  List</a
-                >
-                <button class="primary-btn">
-                  <img src="../assets/icons/Export2.svg" alt="" /> Delete
+              <div class="functions">
+                <button>
+                  <img src="../assets/icons/export.svg" />
+                  <p>Export</p>
                 </button>
-                <button class="primary-btn">
-                  <img src="../assets/icons/Export2.svg" alt="" /> Clone
-                </button>
-                <button class="secondary-btn">
-                  <img src="../assets/icons/Add.svg" alt="" /> Save Changes
+                <button>
+                  <img src="../assets/icons/Add.svg" />
+                  <p>Save Changes</p>
                 </button>
               </div>
             </div>
           </div>
-
-          <!-- End dashboard content -->
         </div>
-        <!-- -------------- ---End  dashboard --- -->
+        <!-- End dashboard content -->
       </div>
+      <!-- -------------- ---End  dashboard --- -->
     </div>
     <script src="../scripts/index.js"></script>
   </body>

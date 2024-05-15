@@ -1,3 +1,13 @@
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", function () {
+    document.body.removeChild(loader);
+  });
+});
+
 // DropDown toggle
 function toggleDropdown() {
   // Query all list items and links within the navigation list
