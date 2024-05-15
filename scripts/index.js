@@ -1,12 +1,22 @@
-window.addEventListener("load", function () {
-  const loader = document.querySelector(".loader");
+function loader() {
+  window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
 
-  loader.classList.add("loader-hidden");
+    // Check if loader element exists before attempting to use it
+    if (loader) {
+      loader.classList.add("loader-hidden");
 
-  loader.addEventListener("transitionend", function () {
-    document.body.removeChild(loader);
+      loader.addEventListener("transitionend", function () {
+        // Ensure the loader is still part of the document before removal
+        if (loader.parentNode) {
+          loader.parentNode.removeChild(loader);
+        }
+      });
+    } else {
+      console.warn("Loader element not found.");
+    }
   });
-});
+}
 
 // DropDown toggle
 function toggleDropdown() {
@@ -220,14 +230,18 @@ function openSidebar() {
 
 // JavaScript to handle select all checkbox functionality
 function selectItemsOnTable() {
-  document
-    .getElementById("selectAllCheckbox")
-    .addEventListener("change", function () {
+  const checkboxes = document.getElementById("selectAllCheckbox");
+
+  if (!checkboxes) {
+    return;
+  } else {
+    checkboxes.addEventListener("change", function () {
       const checkboxes = document.getElementsByClassName("userCheckbox");
       for (const i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = this.checked;
       }
     });
+  }
 }
 
 /* Pagination mechanism */
@@ -369,7 +383,83 @@ function toggleToolTipMenu() {
   });
 }
 
+function toggleTabs() {
+  const activeTab = "active-tab";
+  const tabs = document.querySelectorAll(".tabs-container span");
+
+  tabs.forEach((tab) => {
+    // Add event listener to each tab
+    tab.addEventListener("click", (e) => {
+      // Remove 'active' class from all tabs
+      tabs.forEach((tab) => {
+        tab.classList.remove(activeTab);
+      });
+
+      // Add 'active' class to clicked tab
+      e.target.classList.add(activeTab);
+    });
+  });
+}
+
+function toggleAccordion() {
+  const activeAccordion = "active-accordion";
+  const accordions = document.querySelectorAll(".accordion");
+  const accordionHeaders = [...document.querySelectorAll(".accordion-header")];
+
+  accordionHeaders.forEach((header) => {
+    // Add event listener to each accordion header
+    header.addEventListener("click", (e) => {
+      // Remove 'active' class from all accordion headers
+      let index = accordionHeaders.indexOf(e.currentTarget);
+      accordions[index].classList.toggle(activeAccordion);
+    });
+  });
+}
+
+function passwordValidationCheck() {
+  const colors = ["#f8394a", "#f8a839", "#58bf96"];
+  const passwordInput = document.querySelector(".authenticationPassword");
+  const passwordStrength = document.querySelector(".password-strength");
+  const passwordStrengthText = document.querySelector(
+    ".password-strength-text"
+  );
+
+  if (!passwordInput) {
+    console.error("Password input not found in the document.");
+    return;
+  }
+
+  passwordInput.addEventListener("input", (e) => {
+    const password = e.target.value;
+
+    if (!password) {
+      return;
+    }
+
+    if (password.length < 8) {
+      passwordStrength.style.backgroundColor = colors[0];
+      passwordStrength.style.width = "20%";
+      passwordStrengthText.textContent = "Weak";
+      passwordStrengthText.style.color = colors[0];
+    } else if (password.length < 12) {
+      passwordStrength.style.backgroundColor = colors[1];
+      passwordStrength.style.width = "40%";
+      passwordStrengthText.textContent = "Medium";
+      passwordStrengthText.style.color = colors[1];
+    } else {
+      passwordStrength.style.backgroundColor = colors[2];
+      passwordStrength.style.width = "100%";
+      passwordStrengthText.textContent = "Strong";
+      passwordStrengthText.style.color = colors[2];
+    }
+  });
+}
+passwordValidationCheck();
+
 // Invoke function
+loader();
+toggleAccordion();
+toggleTabs();
 toggleToolTipMenuOnTable();
 otpTransition();
 toggleDropdown();

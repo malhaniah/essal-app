@@ -1126,10 +1126,11 @@ header {
 .user-list.container .filters .functions > button {
   background: transparent;
   color: var(--white);
-  padding: 12px 32px;
-  border: 1px solid var(--ejada-main-color);
+  padding: 12px 25px;
+  border: 2px solid var(--ejada-main-color);
   text-transform: uppercase;
   display: flex;
+  align-items: center;
   gap: 10px;
   color: var(--ejada-main-color);
   border-radius: 10px;
@@ -1142,7 +1143,18 @@ header {
   color: var(--white);
 }
 
-.filters table {
+.user-list.container .filters .functions > .back-btn {
+  border: none;
+  padding: 0;
+}
+
+.user-list.container .filters .functions > .delete-btn {
+  background: transparent !important;
+  color: var(--ejada-error-text-color) !important;
+  border-color: var(--ejada-error-text-color);
+}
+
+table {
   margin-top: -10px;
   width: 100%;
   position: relative;
@@ -1436,8 +1448,12 @@ td.table-img {
   border-radius: 50%;
 }
 table td {
-  font-size: 14px;
+  font-size: 12px;
 }
+/* table td:nth-child(2) {
+  color: var(--ejada-secondary-color);
+  text-decoration: underline;
+} */
 
 /* ------ start create new user group----- */
 .head-function {
@@ -1738,6 +1754,38 @@ textarea:focus {
 }
 /* ------ end create new user ----- */
 
+/* ------ Start Tabs ----- */
+.tabs-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tabs-container span {
+  cursor: pointer;
+  color: #a3a3a8;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+.tabs-container span.active-tab {
+  color: var(--ejada-main-color);
+}
+
+.tabs-container span.active-tab::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: var(--ejada-main-color);
+}
+
 /* ------ start loader ----- */
 .loader {
   width: 100%;
@@ -1747,7 +1795,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999999;
+  z-index: 9999;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1776,3 +1824,323 @@ textarea:focus {
 }
 
 /* ------ end loader ----- */
+
+/* ------ Start Accordion ----- */
+.accordion-container {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.accordion-container .accordion {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.accordion-container .accordion .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #f2f4ff;
+  padding: 14px;
+  position: relative;
+  border-radius: 2px 10px 10px 2px;
+}
+
+.accordion-container .accordion .accordion-header::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: var(--ejada-main-color);
+  left: 0;
+  border-radius: 10px;
+}
+
+.accordion-container .accordion .accordion-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ejada-main-color);
+}
+
+.accordion-container .accordion .accordion-header img {
+  width: 10px;
+}
+
+.accordion-container .accordion .accordion-body {
+  max-width: 100%;
+  min-height: auto;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  flex-grow: 1 1;
+  overflow: hidden;
+}
+
+.accordion-container .accordion.active-accordion .accordion-body {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  /* animation: accordion 200ms ease-in-out; don't need it */
+}
+.accordion-container .accordion.active-accordion .accordion-icon {
+  transform: rotate(-90deg);
+}
+
+/* !In case an animation is needed
+@keyframes accordion {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+} */
+
+.accordion-container .accordion .accordion-body .accordion-component {
+  flex: 1;
+  flex-basis: 25%;
+
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.accordion-container .accordion .accordion-body .accordion-component label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component
+  label
+  .required {
+  color: red;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component
+  label
+  .optional {
+  color: #a3a3a8;
+}
+
+.accordion-container .accordion .accordion-body .accordion-component input,
+.accordion-container .accordion .accordion-body .accordion-component select {
+  border: 2px solid #a3a3a8;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.accordion-container .accordion .accordion-body .accordion-component select {
+  background: transparent;
+  color: #a3a3a8;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  div {
+  display: flex;
+  gap: 0.5rem;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .tag-input
+  input {
+  flex: 3;
+  border-color: var(--ejada-secondary-color);
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .tag-input
+  button {
+  flex: 1;
+  background: var(--ejada-main-color);
+  color: var(--white);
+  border: none;
+  padding: 15px 5px;
+  border-radius: 7px;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .tag-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .tag-container
+  .tag {
+  background: #f2f4ff;
+  color: var(--ejada-main-color);
+  padding: 5px 8px;
+  display: flex;
+  gap: 0.1rem;
+  font-size: 13px;
+  border-radius: 1rem;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .selection-container {
+  display: flex;
+  align-items: start;
+  padding: 10px 0;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .selection-container
+  > div {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="tags"])
+  .selection-container
+  > div
+  p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #59595c;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="supervisor"])
+  .selection-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="supervisor"])
+  .selection-container
+  label {
+  font-size: 16px;
+  color: #404042;
+  font-weight: 600;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="supervisor"])
+  .selection-container
+  p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px;
+  color: #949499;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="password"])
+  .selection-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="password"])
+  .selection-container
+  label {
+  font-size: 16px;
+  color: #404042;
+  font-weight: 600;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="password"])
+  .password-strength-container {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: #d1d4d4;
+  margin: 25px 0;
+  position: relative;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="password"])
+  .password-strength-container
+  .password-strength {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="password"])
+  .password-strength-container
+  .password-strength-text {
+  padding: 10px 0;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component:has(label[for="email-notification"])
+  .selection-container {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+}

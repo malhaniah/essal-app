@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
+    <div class="loader"></div>
     <div class="dashboard-container">
       <!-- ---Start sidebar menu --- -->
       <div>
@@ -314,17 +312,237 @@
                 <span>Avatar</span>
               </div>
               <div class="functions">
-                <button>
-                  <img src="../assets/icons/export.svg" />
-                  <p>Export</p>
+                <button class="back-btn">
+                  <img src="../assets/icons/back.svg" />
+                  <p>Back to list</p>
+                </button>
+                <button class="delete-btn">
+                  <img src="../assets/icons/delete.svg" />
+                  <p>Delete</p>
                 </button>
                 <button>
-                  <img src="../assets/icons/Add.svg" />
+                  <img src="../assets/icons/copy-filled.svg" />
+                  <p>clone</p>
+                </button>
+                <button>
+                  <img src="../assets/icons/save.svg" />
                   <p>Save Changes</p>
                 </button>
               </div>
             </div>
           </div>
+          <main>
+            <div class="accordion-container">
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4>General</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="job-title">
+                      Job Title <span class="required">*</span>
+                    </label>
+                    <input type="text" placeholder="Placeholder" />
+                  </div>
+                  <div class="accordion-component">
+                    <label for="job-title">
+                      First Name <span class="required">*</span>
+                    </label>
+                    <input type="text" placeholder="Placeholder" />
+                  </div>
+                  <div class="accordion-component">
+                    <label for="job-title">
+                      Last Name <span class="required">*</span>
+                    </label>
+                    <input type="text" placeholder="Placeholder" />
+                  </div>
+                  <div class="accordion-component">
+                    <label for="email">
+                      Email <span class="required">*</span>
+                    </label>
+                    <input type="search" placeholder="Placeholder" />
+                  </div>
+                  <div class="accordion-component">
+                    <label for="language">
+                      Language <span class="optional">(Optional)</span>
+                    </label>
+                    <select name="languages" id="">
+                      <option value="placeholder">Placeholder</option>
+                    </select>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="user-type">
+                      User Type <span class="required">*</span>
+                    </label>
+                    <select name="languages" id="">
+                      <option value="internal">Internal</option>
+                    </select>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="tags">
+                      Tags <span class="optional">(Optional)</span>
+                    </label>
+                    <div class="tag-input">
+                      <input type="text" /> <button>Add</button>
+                    </div>
+                    <div class="tag-container">
+                      <span class="tag">
+                        <p>Tag Name</p>
+                        <img src="../assets/icons/x.svg" />
+                      </span>
+                    </div>
+                    <div class="selection-container">
+                      <input type="checkbox" />
+                      <div>
+                        <h4>System Group</h4>
+                        <p>
+                          (Used for special operation in [organization name]
+                          projects, not human user)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="supervisor">
+                      Supervisor <span class="required">*</span>
+                    </label>
+                    <input type="search" placeholder="Placeholder" />
+                    <div class="selection-container">
+                      <label>
+                        <input type="checkbox" checked /> Partial Administrator
+                      </label>
+                      <p>Areas where the partial administrator has access:</p>
+                      <label> <input type="checkbox" /> Groups </label>
+                      <label>
+                        <input type="checkbox" /> Roles & Permissions
+                      </label>
+                      <label> <input type="checkbox" /> Custom Fields </label>
+                      <label>
+                        <input type="checkbox" /> Assets & Configuration
+                      </label>
+                      <label> <input type="checkbox" /> Users </label>
+                      <label>
+                        <input type="checkbox" /> Dashboard Templates
+                      </label>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="dashboard">
+                      Dashboard Template <span class="required">*</span>
+                    </label>
+                    <select name="languages" id="">
+                      <option value="c-level manager">C-Level Manager</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4>Authentication</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="password">
+                      Password <span class="required">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Placeholder"
+                      class="authenticationPassword"
+                    />
+                    <div class="password-strength-container">
+                      <div class="password-strength"></div>
+                      <p class="password-strength-text"></p>
+                    </div>
+                    <div class="selection-container">
+                      <label>
+                        <input type="checkbox" /> Generate Password
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Must change password at next
+                        login
+                      </label>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="confirm-password">
+                      Confirm Password <span class="required">*</span>
+                    </label>
+                    <input type="password" placeholder="Placeholder" />
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4>Preferences</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="hours-format">
+                      Hours Format <span class="required">*</span>
+                    </label>
+                    <select name="hours-format" id="">
+                      <option value="placeholder">Decimal</option>
+                    </select>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="time-zone">
+                      Time Zone <span class="required">*</span>
+                    </label>
+                    <input type="password" placeholder="Placeholder" />
+                  </div>
+                  <div class="accordion-component">
+                    <label for="tags">
+                      External Calendar <span class="optional">(Optional)</span>
+                    </label>
+                    <div class="tag-input">
+                      <input type="text" /> <button>Add</button>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="email-notification">
+                      Email Notification <span class="required">*</span>
+                    </label>
+                    <input type="password" placeholder="Placeholder" />
+                    <div class="selection-container">
+                      <label>
+                        <input type="checkbox" checked /> I don't want to be
+                        notified of changes that I make myself
+                      </label>
+                      <label>
+                        <input type="checkbox" /> I don't want to be notified
+                        from closed task
+                      </label>
+                      <label>
+                        <input type="checkbox" /> I don't want to be notified as
+                        previous assignee
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Do notify anyone about updates
+                        made by me
+                      </label>
+                    </div>
+                  </div>
+                  <!-- !! For alignment !! -->
+                  <div class="accordion-component"></div>
+                  <div class="accordion-component"></div>
+                  <!-- !! For alignment !! -->
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
         <!-- End dashboard content -->
       </div>
