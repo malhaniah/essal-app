@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejada Portfolio Management Dashboard</title>
+    <title>Ejada Portfolio Management | Users List</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <div class="dashboard-container">
       <!-- ---Start sidebar menu --- -->
       <div>
@@ -298,10 +301,10 @@
         <div class="dashboard-content">
           <div class="user-path">
             <span class="inactive">Account Settings</span> <span> > </span>
-            <span class="active">User Groups</span>
+            <span class="active">User Types</span>
           </div>
           <div class="user-list container">
-            <h4>Users Groups</h4>
+            <h4>User Types</h4>
             <div class="filters">
               <div class="utilities">
                 <div class="search-container">
@@ -323,7 +326,7 @@
                 </button>
                 <button>
                   <img src="../assets/icons/Add.svg" />
-                  <p>Create User</p>
+                  <p>Create User Type</p>
                 </button>
               </div>
             </div>
@@ -335,12 +338,11 @@
                       <input type="checkbox" id="selectAllCheckbox" />
                     </th>
                     <!-- Checkbox to select all users -->
-                    <th>Group ID</th>
-                    <th>Group Name</th>
-                    <th>Group Admin</th>
+                    <th>Type ID</th>
+                    <th>User Types</th>
                     <th># of Users</th>
                     <th>Date Created</th>
-                    <th>Descreption</th>
+                    <th>Description</th>
                     <th>Status</th>
                     <th></th>
                     <!-- Empty header for options column -->
@@ -350,139 +352,11 @@
                   <tr>
                     <td><input type="checkbox" class="userCheckbox" /></td>
                     <td>1345</td>
-                    <td>Solution Architects</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 11.png" alt="" />
-                      Youssef Bagha
-                    </td>
-                    <td>322</td>
+                    <td>C-Level Manager</td>
+                    <td>223</td>
                     <td>2024-04-28</td>
                     <td>Lorem Ipsum Dolor Mit Sud Dun</td>
                     <td class="status-active"><div>Active</div></td>
-                    <td class="options-column">
-                      <div class="options-container">
-                        <div class="options-menu">
-                          <ul>
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Manage</a></li>
-                            <li><a href="#">View Details</a></li>
-                            <li><a href="#">Delete</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <button class="active-btn">
-                        <img src="../assets/icons/three-dot.svg" />
-                      </button>
-                    </td>
-                    <!-- Options column -->
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" class="userCheckbox" /></td>
-                    <td>2454</td>
-                    <td>Testers</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
-                      Sallab
-                    </td>
-                    <td>15</td>
-                    <td>2024-04-30</td>
-                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
-                    <td class="status-inactive">
-                      <div>Inactive</div>
-                    </td>
-                    <td class="options-column">
-                      <div class="options-container">
-                        <div class="options-menu">
-                          <ul>
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Manage</a></li>
-                            <li><a href="#">View Details</a></li>
-                            <li><a href="#">Delete</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <button class="active-btn">
-                        <img src="../assets/icons/three-dot.svg" />
-                      </button>
-                    </td>
-                    <!-- Options column -->
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" class="userCheckbox" /></td>
-                    <td>2454</td>
-                    <td>Product Owners</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 14.png" alt="" /> Karim
-                      Sallab
-                    </td>
-                    <td>15</td>
-                    <td>2024-04-30</td>
-                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
-                    <td class="status-inactive">
-                      <div>Inactive</div>
-                    </td>
-                    <td class="options-column active-btn">
-                      <div class="options-container">
-                        <div class="options-menu">
-                          <ul>
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Manage</a></li>
-                            <li><a href="#">View Details</a></li>
-                            <li><a href="#">Delete</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <button class="active-btn">
-                        <img src="../assets/icons/three-dot.svg" />
-                      </button>
-                    </td>
-                    <!-- Options column -->
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" class="userCheckbox" /></td>
-                    <td>2454</td>
-                    <td>Testers</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
-                      Sallab
-                    </td>
-                    <td>15</td>
-                    <td>2024-04-30</td>
-                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
-                    <td class="status-inactive">
-                      <div>Inactive</div>
-                    </td>
-                    <td class="options-column active-btn">
-                      <div class="options-container">
-                        <div class="options-menu">
-                          <ul>
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Manage</a></li>
-                            <li><a href="#">View Details</a></li>
-                            <li><a href="#">Delete</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <button class="active-btn">
-                        <img src="../assets/icons/three-dot.svg" />
-                      </button>
-                    </td>
-                    <!-- Options column -->
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" class="userCheckbox" /></td>
-                    <td>2454</td>
-                    <td>Testers</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 12.png" alt="" /> Karim
-                      Sallab
-                    </td>
-                    <td>15</td>
-                    <td>2024-04-30</td>
-                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
-                    <td class="status-inactive">
-                      <div>Inactive</div>
-                    </td>
                     <td class="options-column">
                       <div class="options-container">
                         <div class="options-menu">
@@ -503,16 +377,11 @@
                   <tr>
                     <td><input type="checkbox" class="userCheckbox" /></td>
                     <td>1345</td>
-                    <td>Solution Architects</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 11.png" alt="" />
-                      Youssef Bagha
-                    </td>
-                    <td>322</td>
+                    <td>Project Manager</td>
+                    <td>15</td>
                     <td>2024-04-28</td>
                     <td>Lorem Ipsum Dolor Mit Sud Dun</td>
                     <td class="status-active"><div>Active</div></td>
-
                     <td class="options-column">
                       <div class="options-container">
                         <div class="options-menu">
@@ -533,16 +402,11 @@
                   <tr>
                     <td><input type="checkbox" class="userCheckbox" /></td>
                     <td>1345</td>
-                    <td>Solution Architects</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 11.png" alt="" />
-                      Youssef Bagha
-                    </td>
-                    <td>322</td>
+                    <td>Scrum Master</td>
+                    <td>0</td>
                     <td>2024-04-28</td>
                     <td>Lorem Ipsum Dolor Mit Sud Dun</td>
                     <td class="status-active"><div>Active</div></td>
-
                     <td class="options-column">
                       <div class="options-container">
                         <div class="options-menu">
@@ -563,16 +427,36 @@
                   <tr>
                     <td><input type="checkbox" class="userCheckbox" /></td>
                     <td>1345</td>
-                    <td>Solution Architects</td>
-                    <td class="flex-row table-img">
-                      <img src="../assets/images/Ellipse 11.png" alt="" />
-                      Youssef Bagha
-                    </td>
-                    <td>322</td>
+                    <td>Agile PO</td>
+                    <td>22</td>
                     <td>2024-04-28</td>
                     <td>Lorem Ipsum Dolor Mit Sud Dun</td>
-                    <td class="status-active"><div>Active</div></td>
-
+                    <td class="status-inactive"><div>Inactive</div></td>
+                    <td class="options-column">
+                      <div class="options-container">
+                        <div class="options-menu">
+                          <ul>
+                            <li><a href="#">Edit</a></li>
+                            <li><a href="#">Manage</a></li>
+                            <li><a href="#">View Details</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <button class="active-btn">
+                        <img src="../assets/icons/three-dot.svg" />
+                      </button>
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1345</td>
+                    <td>Team Manager</td>
+                    <td>43</td>
+                    <td>2024-04-28</td>
+                    <td>Lorem Ipsum Dolor Mit Sud Dun</td>
+                    <td class="status-inactive"><div>Inactive</div></td>
                     <td class="options-column">
                       <div class="options-container">
                         <div class="options-menu">
