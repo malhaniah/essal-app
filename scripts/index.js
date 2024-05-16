@@ -454,10 +454,31 @@ function passwordValidationCheck() {
     }
   });
 }
-passwordValidationCheck();
+
+function uploadListener(fileInputId) {
+  const fileInput = document.getElementById(fileInputId);
+
+  if (!fileInput) {
+    console.error("File input not found in the document.");
+    return;
+  }
+
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (!file) {
+      return;
+    } else {
+      document.querySelector(".no-file-chosen").classList.remove("uploaded");
+    }
+
+    alert(`File name: ${file.name} has been uploaded`);
+    document.querySelector(".no-file-chosen").classList.add("uploaded");
+  });
+}
 
 // Invoke function
 loader();
+passwordValidationCheck();
 toggleAccordion();
 toggleTabs();
 toggleToolTipMenuOnTable();
@@ -468,3 +489,4 @@ updateActiveClassItem();
 paginate();
 selectItemsOnTable();
 displayResults();
+uploadListener("avatar");
