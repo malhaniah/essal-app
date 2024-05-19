@@ -14,6 +14,10 @@
   --ejada-error-text-color: #f8394a;
   --ejada-error-background-color: #fff5f6;
   --ejada-success-text-color: #58bf96;
+  /* Buttons Colors */
+  --primary-btn-color: #001081;
+  --secondary-btn-color: #c5cfda;
+  --danger-btn-color: #ed696a;
 }
 
 * {
@@ -31,6 +35,39 @@ html,
 body {
   height: 100%;
 }
+
+/* ---- Start of Button Styles ---- */
+.btn {
+  cursor: pointer;
+  min-width: 145px;
+  padding: 9px 16px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border-radius: 7px;
+}
+
+.btn-primary {
+  background-color: var(--primary-btn-color);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-btn-color);
+  color: var(--ejada-text-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-btn-color);
+  color: var(--white);
+}
+
+/* ---- End of Button Styles ---- */
 
 .flex-row {
   align-items: center;
@@ -2136,10 +2173,10 @@ textarea:focus {
   font-size: 14px;
 }
 
-.accordion-container .accordion .accordion-body .accordion-component div {
+/* .accordion-container .accordion .accordion-body .accordion-component div {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .accordion-container .accordion .accordion-body .accordion-component div p {
   font-size: 12px;
@@ -2189,16 +2226,6 @@ textarea:focus {
   display: none;
 }
 
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-list-container {
-  border: 1px solid #a3a3a8;
-  padding: 16px;
-  border-radius: 10px;
-}
-
 .accordion-container .accordion .accordion-body .accordion-component .m-img {
   width: 75px;
 }
@@ -2219,6 +2246,130 @@ textarea:focus {
   .accordion-body
   .accordion-component:has(label[for="email-notification"])
   .selection-container {
+  flex: 1;
+  gap: 1rem;
+  flex-flow: column nowrap;
+}
+
+/* End Custom Modifiers */
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component
+  .selection-list-container {
+  flex: 2;
+  border: 1px solid #a3a3a8;
+  padding: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component
+  .selection-list-container
+  .selection-list-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.selection-list-container .selection-list-header .selection-list-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ejada-main-color);
+}
+
+.selection-list-container .selection-list-header .selection-list-count {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ejada-secondary-text-color);
+}
+
+.selection-list-container .selection-list-body {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.selection-list-container .selection-list-body .selection-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #a3a3a8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.selection-list-container .selection-list-body .selection-search input {
+  border: none !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+.selection-list-container .selection-list-body .selection-list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.selection-list-container .selection-list-body .selection-list .selection-item {
+  padding: 15px 10px;
+}
+
+.selection-list-container
+  .selection-list-body
+  .selection-list
+  .selection-item
+  .selection-label {
+  cursor: pointer;
+}
+
+.selection-list-container
+  .selection-list-body
+  .selection-list
+  .selection-item
+  .selection-label
+  .selection-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ejada-text-color-color);
+}
+
+.selection-list-container
+  .selection-list-body
+  .selection-list
+  .selection-item
+  .selection-label
+  .selection-email {
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 18px;
+  color: var(--ejada-secondary-text-color);
+}
+
+.selection-list-container
+  .selection-list-body
+  .selection-list
+  .selection-item:has(.selection-label .selection-checkbox:checked) {
+  background-color: #f3f7ff;
+}
+
+.accordion-container
+  .accordion
+  .accordion-body
+  .accordion-component
+  .selection-actions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-flow: column nowrap;
 }
