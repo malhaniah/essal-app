@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejada Portfolio Management | Users List</title>
+    <title>Ejada Portfolio Management | Create New User Type</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
@@ -299,30 +299,22 @@
         <div class="dashboard-content">
           <div class="user-path">
             <span class="inactive">Account Settings</span> <span> > </span>
-            <span class="inactive">User Groups</span> <span> > </span>
-            <span class="active">Create New Group</span>
+            <span class="active">Create New Organization</span>
           </div>
           <div class="user-list container">
-            <h4>Create New Group</h4>
+            <h4>Organization Name</h4>
             <div class="filters">
               <div class="tabs-container">
                 <span class="active-tab">General</span>
-                <span>Users</span>
-                <span>Projects</span>
-                <span>Programs</span>
+                <span>Contact Information</span>
+                <span>Legal Information</span>
+                <span>Organization Structure</span>
+                <span>Identity Assets</span>
               </div>
               <div class="functions">
-                <button class="back-btn">
-                  <img src="../assets/icons/back.svg" />
-                  <p>Back to list</p>
-                </button>
                 <button class="delete-btn">
                   <img src="../assets/icons/delete.svg" />
                   <p>Delete</p>
-                </button>
-                <button>
-                  <img src="../assets/icons/copy-filled.svg" />
-                  <p>clone</p>
                 </button>
                 <button>
                   <img src="../assets/icons/save.svg" />
@@ -335,7 +327,7 @@
             <div class="accordion-container">
               <div class="accordion">
                 <div class="accordion-header">
-                  <h4 class="accordion-title">General Details</h4>
+                  <h4 class="accordion-title">General</h4>
                   <img
                     src="../assets/icons/arrow-down.svg"
                     class="accordion-icon"
@@ -343,90 +335,44 @@
                 </div>
                 <div class="accordion-body">
                   <div class="accordion-component">
-                    <label for="group-name">
-                      Group Name <span class="required">*</span>
-                    </label>
-                    <div class="input-container sm">
-                      <input type="text" class="input" />
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="tags">
-                      Group Admin <span class="required">*</span>
-                    </label>
-                    <div class="tag-input">
-                      <input type="text" /> <button>Add</button>
-                    </div>
-                    <div class="tag-container">
-                      <span class="tag">
-                        <p>Admin Name</p>
-                        <img src="../assets/icons/x.svg" />
-                      </span>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="status">
-                      Status <span class="required">*</span>
-                    </label>
-                    <div class="input-container sm">
-                      <select name="status">
-                        <option value="placeholder">Placeholder</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="group-type">
-                      Group Type <span class="required">*</span>
+                    <label for="organization-name-en">
+                      Organization Name <span class="optional">[English]</span>
                     </label>
                     <div class="input-container lg">
-                      <select name="status">
-                        <option value="placeholder">Placeholder</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="tags">
-                      Permissions <span class="required">*</span>
-                    </label>
-                    <div class="tag-input">
-                      <input type="text" /> <button>Add</button>
-                    </div>
-                    <div class="tag-container">
-                      <span class="tag">
-                        <p>Permission A</p>
-                        <img src="../assets/icons/x.svg" />
-                      </span>
-                      <span class="tag">
-                        <p>Permission B</p>
-                        <img src="../assets/icons/x.svg" />
-                      </span>
-                      <span class="tag">
-                        <p>Permission C</p>
-                        <img src="../assets/icons/x.svg" />
-                      </span>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="textarea">
-                      Description <span class="optional">(Optional)</span>
-                    </label>
-                    <div class="textarea-container">
-                      <textarea
-                        name="description"
+                      <input
+                        type="text"
+                        class="input"
                         placeholder="Placeholder"
-                        maxlength="50"
-                      ></textarea>
+                      />
                     </div>
-                    <div>
-                      <p>Help text goes here</p>
-                      <p>0/50</p>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-name-ar">
+                      Organization Name <span class="optional">[Arabic]</span>
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-code"> Organization Code </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="accordion">
                 <div class="accordion-header">
-                  <h4 class="accordion-title">Avatar</h4>
+                  <h4 class="accordion-title">Contact Information</h4>
                   <img
                     src="../assets/icons/arrow-down.svg"
                     class="accordion-icon"
@@ -434,7 +380,290 @@
                 </div>
                 <div class="accordion-body">
                   <div class="accordion-component">
-                    <label for="modify-avatar"></label>
+                    <label for="phone-number">
+                      Phone Number <span class="required">*</span>
+                    </label>
+                    <div class="items-container">
+                      <div class="phone-container">
+                        <div class="input">
+                          <img src="../assets/icons/sa-flag.svg" />
+                          <select name="country">
+                            <option value="966">+966</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="input-container lg">
+                        <input
+                          type="text"
+                          class="input"
+                          placeholder="Placeholder"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="email-address"> Email Address </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="website"> Website </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="website"> Website </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="city"> City </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="country"> Country </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="district"> District </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="postal-code"> Postal Code </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4 class="accordion-title">Legal Information</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="commercial-registration-number">
+                      Commercial Registration Number
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="vat-id"> VAT ID </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-type"> Organization Type </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-industry">
+                      Organization Industry / Sector
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-size">
+                      Organization Size
+                      <span class="optional">[Number of employees]</span>
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="annual-revenue">Annual Revenue </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4 class="accordion-title">Organization Structure</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="ceo">
+                      CEO
+                      <span class="required">* </span>
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="ceo">
+                      Departments
+                      <span class="required">* </span>
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="ceo">
+                      Branches
+                      <span class="required">* </span>
+                    </label>
+                    <div class="input-container lg">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Placeholder"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h4 class="accordion-title">Identity Assets</h4>
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="accordion-icon"
+                  />
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-component">
+                    <label for="organization-logo">
+                      Organization Logo <span class="required">*</span>
+                    </label>
+                    <div class="upload-container">
+                      <img
+                        src="../assets/icons/edit-avatar.svg"
+                        class="m-img"
+                      />
+                      <label for="avatar" class="custom-btn">
+                        Choose File
+                        <input type="file" name="avatar" id="avatar" />
+                      </label>
+                      <p class="no-file-chosen">No File Chosen</p>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-logo">
+                      Official Letter Head Text <span class="required">*</span>
+                    </label>
+                    <div class="textarea-container">
+                      <textarea
+                        placeholder="Ejada Systems Company Text goes here"
+                        maxlength="50"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
+                    <label for="organization-logo">
+                      Official Letter Footer Text
+                      <span class="required">*</span>
+                    </label>
+                    <div class="textarea-container">
+                      <textarea
+                        placeholder="Ejada Systems Company Text goes here"
+                        maxlength="50"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="accordion-component"></div>
+                  <div class="accordion-component">
+                    <div class="upload-container">
+                      <img
+                        src="../assets/icons/edit-avatar.svg"
+                        class="m-img"
+                      />
+                      <label for="avatar" class="custom-btn">
+                        Choose File
+                        <input type="file" name="avatar" id="avatar" />
+                      </label>
+                      <p class="no-file-chosen">No File Chosen</p>
+                    </div>
+                  </div>
+                  <div class="accordion-component">
                     <div class="upload-container">
                       <img
                         src="../assets/icons/edit-avatar.svg"
@@ -449,164 +678,16 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion">
-                <div class="accordion-header">
-                  <h4 class="accordion-title">General Details</h4>
-                  <img
-                    src="../assets/icons/arrow-down.svg"
-                    class="accordion-icon"
-                  />
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-component">
-                    <div class="selection-list-container">
-                      <div class="selection-list-header">
-                        <h3 class="selection-list-title">Available Users</h3>
-                        <p class="selection-list-count">
-                          <span>3</span> of <span> 300</span> Selected
-                        </p>
-                      </div>
-                      <div class="selection-list-body">
-                        <div class="selection-search">
-                          <img src="../assets/icons/heart.svg" />
-                          <input type="text" placeholder="Type to filter" />
-                        </div>
-                        <div class="selection-list">
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <div class="selection-actions">
-                      <button class="btn btn-secondary">
-                        Add <img src="../assets/icons/pluse.svg" />
-                      </button>
-                      <button class="btn btn-danger">
-                        <img src="../assets/icons/minus.svg" /> Remove User
-                      </button>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <div class="selection-list-container">
-                      <div class="selection-list-header">
-                        <h3 class="selection-list-title">Group Users</h3>
-                        <p class="selection-list-count">
-                          <span>3</span> of <span> 300</span> Selected
-                        </p>
-                      </div>
-                      <div class="selection-list-body">
-                        <div class="selection-search">
-                          <img src="../assets/icons/heart.svg" />
-                          <input type="text" placeholder="Type to filter" />
-                        </div>
-                        <div class="selection-list">
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="selection-item">
-                            <label class="selection-label">
-                              <div class="checkbox-container sm">
-                                <input type="checkbox" />
-                                <img
-                                  src="../assets/icons/check.svg"
-                                  class="checkbox"
-                                />
-                              </div>
-                              <span class="selection-name">
-                                Mohammed Sharif
-                                <p class="selection-email">
-                                  example@example.com
-                                </p>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="drag-component">
+              <div class="drag-content">
+                <h4>Drag and drop files here</h4>
+                <img src="../assets/icons/drag.svg" />
+                <button>Browse File</button>
+                <h4>
+                  File types to be uploaded here, JPG PNG JPEG, Maximum weight
+                  is 5 MB per file
+                </h4>
               </div>
             </div>
           </main>
@@ -616,7 +697,6 @@
       <!-- -------------- ---End  dashboard --- -->
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <script src="../scripts/index.js"></script>
   </body>
 </html>

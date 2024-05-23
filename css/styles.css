@@ -8,6 +8,8 @@
   /* Defaults */
   --white: #ffffff;
   --off-gray-color: #f8f8f8;
+  --disabled-color: #f1f1f5;
+  --off-blue-color: #f2f4ff;
   /* Text Colors */
   --ejada-text-color: #333333;
   --ejada-secondary-text-color: #666666;
@@ -18,6 +20,16 @@
   --primary-btn-color: #001081;
   --secondary-btn-color: #c5cfda;
   --danger-btn-color: #ed696a;
+  /* Alerts Colors */
+  --error-background-color: #fdedf0;
+  --success-background-color: #e9fdf4;
+  --caution-background-color: #fcf7e1;
+  --info-background-color: #e2f2ff;
+  --general-background-color: #e6e8e8;
+  /* Toast Message Colors */
+  --toast-background-color: #000000;
+  /* Borders Color */
+  --general-border-color: #a3a3a8;
 }
 
 * {
@@ -69,6 +81,233 @@ body {
 
 /* ---- End of Button Styles ---- */
 
+/* ---- Start of Inputs Styles ---- */
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  gap: 1rem;
+  border: 1px solid var(--general-border-color);
+  background: var(--white);
+  border-radius: 7px;
+}
+
+.input-container .input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.input-container.lg,
+.input-container.md,
+.input-container.sm,
+.tag-input button,
+.tag-input input {
+  /* max-width: 327px; */
+  padding: 12px 16px;
+  /* margin: 24px; */
+}
+
+.input-container.lg {
+  max-height: 56pt;
+}
+
+.input-container.md {
+  max-height: 48pt;
+}
+
+.input-container.sm {
+  max-height: 36pt;
+}
+
+.items-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-container select {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.phone-container {
+  border-radius: 7px;
+  padding: 5px 15px;
+  color: var(--ejada-secondary-text-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  border: 1px solid var(--general-border-color);
+}
+
+.phone-container .input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-container select {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.textarea-container {
+  min-height: 140px;
+  border: 2px solid var(--general-border-color);
+  border-radius: 7px;
+  position: relative;
+  overflow: scroll;
+}
+
+.textarea-container textarea {
+  min-height: inherit;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-size: 14px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.tag-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tag-container .tag {
+  background: var(--off-blue-color);
+  color: var(--ejada-main-color);
+  padding: 5px 8px;
+  display: flex;
+  gap: 0.1rem;
+  font-size: 13px;
+  border-radius: 1rem;
+}
+
+.tag-input {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.tag-input button,
+.tag-input input {
+  border-radius: 7px;
+}
+
+.tag-input button {
+  flex: 1;
+  background: var(--ejada-main-color);
+  color: var(--white);
+  border: none;
+}
+
+.tag-input input {
+  flex: 3;
+  border-color: var(--ejada-main-color);
+}
+
+.disabled .input-container,
+.disabled .phone-container,
+.disabled .textarea-container,
+.disabled .tag-container {
+  /* Disabled Version */
+  background-color: var(--disabled-color);
+}
+
+/* ---- End of Input Styles ---- */
+
+/* ---- Start of Checkbox Styles ---- */
+.checkbox-container {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--general-border-color);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.checkbox-container img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-container.checked img {
+  display: block;
+}
+
+.checkbox-container.lg {
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-container.md {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-container.sm {
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-container.checked {
+  border-color: var(--ejada-main-color);
+  background-color: var(--ejada-main-color);
+}
+
+label:has(.checkbox-container) {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+/* ---- End of Checkbox Styles ---- */
+
+/* ---- Start of Selection List Styles ---- */
+.selection-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.accordion-component label[for="tags"] ~ .selection-container,
+.accordion-component label[for="password"] ~ .selection-container {
+  /* Fix for tags selection list */
+  /* flex-flow: row nowrap !important; */
+  align-items: start;
+}
+/* ---- End of Selection List Styles ---- */
+
 .flex-row {
   align-items: center;
   display: flex;
@@ -104,7 +343,7 @@ body {
 }
 
 .form-container .form-header .menu-list li a {
-  color: #353535;
+  color: var(--ejada-text-color);
 }
 .form-container .form-header .menu-list img {
   vertical-align: middle;
@@ -128,9 +367,6 @@ body {
   gap: 20px;
   color: var(--ejada-secondary-text-color);
 }
-
-/* .inputs-container input,
-.inputs-container .form-input { */
 
 .form-content input,
 .form-input {
@@ -603,7 +839,9 @@ header {
 
 /* Youmna's changes */
 .disabled {
-  color: var(--ejada-secondary-text-color) !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .otp-input input {
@@ -1265,7 +1503,7 @@ tbody td:last-child {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: #a3a3a8;
+  background: var(--general-border-color);
 }
 
 .options-column {
@@ -1433,7 +1671,7 @@ td.table-img {
 }
 .options-column::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #a3a3a8;
+  background-color: var(--general-border-color);
   border: 3px solid #f2f2f2;
 }
 /* --------table status styles  -----------*/
@@ -1462,7 +1700,7 @@ td.table-img {
 }
 
 .status-inactive > div {
-  border: 2px solid #a3a3a8;
+  border: 2px solid var(--general-border-color);
   padding: 5px;
   border-radius: 4px;
   text-align: right;
@@ -1478,7 +1716,7 @@ td.table-img {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: #a3a3a8;
+  background-color: var(--general-border-color);
   /* position: absolute;
   left: 18px;
   top: 7px; */
@@ -1548,13 +1786,6 @@ table td {
   color: var(--ejada-main-color);
   margin-bottom: 10px;
 }
-.input-container {
-  display: flex;
-  justify-content: space-between;
-}
-.input-container input {
-  border: none;
-}
 
 .details-box .form-inputs {
   margin-top: 40px;
@@ -1570,7 +1801,7 @@ table td {
   margin-left: 5px;
 }
 .details-box .form-inputs .input {
-  border: 1px solid #a3a3a8;
+  border: 1px solid var(--general-border-color);
   padding: 10px;
   border-radius: 7px;
   display: flex;
@@ -1586,7 +1817,7 @@ table td {
   font-size: 12px;
   position: absolute;
   top: 45px;
-  background-color: #f2f4ff;
+  background-color: var(--off-blue-color);
   padding: 2px 5px;
   border-radius: 7px;
 }
@@ -1603,7 +1834,7 @@ table td {
   color: var(--ejada-secondary-text-color);
 }
 .details-box .description-box textarea {
-  border: 1px solid #a3a3a8;
+  border: 1px solid var(--general-border-color);
   border-radius: 7px;
   margin-top: 5px;
   padding: 10px;
@@ -1628,7 +1859,7 @@ textarea:focus {
   color: var(--ejada-secondary-text-color);
 }
 .textarea-foot p:last-child {
-  color: #a3a3a8;
+  color: var(--general-border-color);
 }
 .details-box .description-box textarea::-webkit-scrollbar {
   background-color: #ffffff;
@@ -1637,7 +1868,7 @@ textarea:focus {
 
 .details-box .description-box textarea::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #a3a3a8;
+  background-color: var(--general-border-color);
   border: 3px solid #ffffff;
 }
 .details-box .description-box::after {
@@ -1801,7 +2032,7 @@ textarea:focus {
 
 .tabs-container span {
   cursor: pointer;
-  color: #a3a3a8;
+  color: var(--general-border-color);
   font-size: 16px;
   font-weight: 600;
   position: relative;
@@ -1871,7 +2102,7 @@ textarea:focus {
   gap: 1rem;
 }
 
-.accordion-container .accordion {
+.accordion {
   width: 100%;
   min-height: auto;
   display: flex;
@@ -1880,18 +2111,18 @@ textarea:focus {
   overflow: hidden;
 }
 
-.accordion-container .accordion .accordion-header {
+.accordion-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  background: #f2f4ff;
+  background: var(--off-blue-color);
   padding: 14px;
   position: relative;
   border-radius: 2px 10px 10px 2px;
 }
 
-.accordion-container .accordion .accordion-header::before {
+.accordion-header::before {
   content: "";
   position: absolute;
   width: 5px;
@@ -1901,51 +2132,54 @@ textarea:focus {
   border-radius: 10px;
 }
 
-.accordion-container .accordion .accordion-header h4 {
+.accordion-title {
   font-size: 16px;
   font-weight: 600;
   color: var(--ejada-main-color);
 }
 
-.accordion-container .accordion .accordion-header img {
+.accordion-icon {
   width: 10px;
+  transform: rotate(0);
 }
 
-.accordion-container .accordion .accordion-body {
-  max-width: 100%;
-  min-height: auto;
-  display: flex;
-  gap: 1rem;
-  flex-flow: row wrap;
-  flex-grow: 1 1;
-  overflow: hidden;
+.accordion.active-accordion .accordion-header {
+  background: var(--general-background-color);
 }
 
-.accordion-container .accordion.active-accordion .accordion-body {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-  /* animation: accordion 200ms ease-in-out; don't need it */
+.accordion.active-accordion .accordion-header::before {
+  background: var(--ejada-secondary-text-color);
 }
-.accordion-container .accordion.active-accordion .accordion-icon {
+
+.accordion.active-accordion .accordion-title {
+  color: var(--ejada-secondary-text-color);
+}
+
+.accordion.active-accordion .accordion-icon {
   transform: rotate(-90deg);
 }
 
-/* !In case an animation is needed
-@keyframes accordion {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-} */
+.accordion-body {
+  max-width: 100%;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+}
 
-.accordion-container .accordion .accordion-body .accordion-component {
+.accordion.active-accordion .accordion-body {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.accordion-component {
   flex: 1;
   flex-basis: 25%;
-
   display: flex;
+  overflow-x: hidden;
   flex-flow: column;
   gap: 0.5rem;
 }
@@ -1955,303 +2189,13 @@ textarea:focus {
   font-weight: 400;
 }
 
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  label
-  .required {
+.required {
   color: red;
 }
 
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  label
-  .optional {
-  color: #a3a3a8;
+.optional {
+  color: var(--general-border-color);
 }
-
-.accordion-container .accordion .accordion-body .accordion-component input,
-.accordion-container .accordion .accordion-body .accordion-component select {
-  border: 2px solid #a3a3a8;
-  padding: 15px;
-  border-radius: 7px;
-}
-
-.accordion-container .accordion .accordion-body .accordion-component select {
-  background: transparent;
-  color: #a3a3a8;
-}
-
-/* 
-
- - Tags
- - 
-
-*/
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-container {
-  display: flex;
-  align-items: start;
-  padding: 10px 0;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-container
-  div {
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-container
-  div
-  p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #59595c;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-container
-  p {
-  font-size: 14px;
-  font-weight: 400;
-  padding: 0 20px;
-  color: #949499;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .selection-container
-  label {
-  font-size: 16px;
-  color: #404042;
-  font-weight: 600;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .tag-input {
-  display: flex;
-  gap: 1rem;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .tag-input
-  input {
-  flex: 3;
-  border-color: var(--ejada-secondary-color);
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .tag-input
-  button {
-  flex: 1;
-  background: var(--ejada-main-color);
-  color: var(--white);
-  border: none;
-  padding: 15px 5px;
-  border-radius: 7px;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .tag-container {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .tag-container
-  .tag {
-  background: #f2f4ff;
-  color: var(--ejada-main-color);
-  padding: 5px 8px;
-  display: flex;
-  gap: 0.1rem;
-  font-size: 13px;
-  border-radius: 1rem;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component:has(label[for="supervisor"])
-  .selection-container {
-  flex-flow: column nowrap;
-  gap: 1rem;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component:has(label[for="password"])
-  .selection-container {
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .password-strength-container {
-  width: 100%;
-  height: 5px;
-  border-radius: 10px;
-  background: #d1d4d4;
-  margin: 25px 0;
-  position: relative;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .password-strength-container
-  .password-strength {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 90%;
-  border-radius: 10px;
-  transition: all 300ms ease-in-out;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .password-strength-container
-  .password-strength-text {
-  padding: 10px 0;
-}
-
-.accordion-container .accordion .accordion-body .accordion-component textarea {
-  height: 140px;
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid #a3a3a8;
-  font-size: 14px;
-}
-
-/* .accordion-container .accordion .accordion-body .accordion-component div {
-  display: flex;
-  justify-content: space-between;
-} */
-
-.accordion-container .accordion .accordion-body .accordion-component div p {
-  font-size: 12px;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  input[type="file"] {
-  border: 0;
-  display: none;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .custom-btn {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  background: #c5cfda;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 9px 21px;
-  border-radius: 10px;
-  color: #404042;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .no-file-chosen {
-  font-size: 14px;
-  font-weight: 400;
-  color: #111;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component
-  .no-file-chosen.uploaded {
-  display: none;
-}
-
-.accordion-container .accordion .accordion-body .accordion-component .m-img {
-  width: 75px;
-}
-
-/* Custom Modifiers */
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component:has(label[for="modify-avatar"]) {
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 1rem;
-}
-
-.accordion-container
-  .accordion
-  .accordion-body
-  .accordion-component:has(label[for="email-notification"])
-  .selection-container {
-  flex: 1;
-  gap: 1rem;
-  flex-flow: column nowrap;
-}
-
-/* End Custom Modifiers */
 
 .accordion-container
   .accordion
@@ -2350,14 +2294,13 @@ textarea:focus {
   .selection-email {
   font-size: 12px;
   font-weight: 400;
-  padding-left: 18px;
   color: var(--ejada-secondary-text-color);
 }
 
 .selection-list-container
   .selection-list-body
   .selection-list
-  .selection-item:has(.selection-label .selection-checkbox:checked) {
+  .selection-item:has(.checkbox-container.checked) {
   background-color: #f3f7ff;
 }
 
@@ -2372,4 +2315,87 @@ textarea:focus {
   justify-content: center;
   gap: 1rem;
   flex-flow: column nowrap;
+}
+
+.selection-name {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+}
+
+/* File Input */
+input[type="file"] {
+  border: 0;
+  display: none;
+}
+
+.custom-btn {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background: #c5cfda;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 21px;
+  border-radius: 10px;
+  color: #404042;
+}
+
+.no-file-chosen {
+  font-size: 14px;
+  font-weight: 400;
+  color: #111;
+}
+
+.no-file-chosen.uploaded {
+  display: none;
+}
+
+.accordion-container .accordion .accordion-body .accordion-component .m-img {
+  width: 75px;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* End File Input */
+
+/* Drag and Drop Component */
+.drag-component {
+  margin: 54px 0;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 7px;
+  font-weight: 600;
+  border: 2px dashed var(--ejada-main-color);
+  background: var(--off-blue-color);
+}
+
+.drag-component .drag-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.drag-component .drag-content h4 {
+  color: var(--general-border-color);
+  font-weight: 400;
+}
+
+.drag-component .drag-content button {
+  padding: 9px 18px;
+  background: var(--ejada-main-color);
+  color: var(--white);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }

@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sandbox</title>
-  </head>
+<html>
+  <style>
+    :root {
+      /* Ejada's Colors */
+      --ejada-main-color: #001081;
+      --ejada-secondary-color: #0000ff;
+      --ejada-accent-color: #1fed93;
+      /* Defaults */
+      --white: #ffffff;
+      --off-gray-color: #f8f8f8;
+      /* Text Colors */
+      --ejada-text-color: #333333;
+      --ejada-secondary-text-color: #666666;
+      --ejada-error-text-color: #f8394a;
+      --ejada-error-background-color: #fff5f6;
+      --ejada-success-text-color: #58bf96;
+      /* Buttons Colors */
+      --primary-btn-color: #001081;
+      --secondary-btn-color: #c5cfda;
+      --danger-btn-color: #ed696a;
+      /* Alerts Colors */
+      --error-background-color: #fdedf0;
+      --success-background-color: #e9fdf4;
+      --caution-background-color: #fcf7e1;
+      --info-background-color: #e2f2ff;
+      --general-background-color: #e6e8e8;
+      /* Toast Message Colors */
+      --toast-background-color: #000000;
+      /* Borders Color */
+      --general-border-color: #a3a3a8;
+    }
+
+    .checkbox-container {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--general-border-color);
+      border-radius: 3px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .checkbox-container img {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+
+    .checkbox-container.checked img {
+      display: block;
+    }
+
+    .checkbox-container.checked {
+      border-color: var(--ejada-main-color);
+      background-color: var(--ejada-main-color);
+    }
+  </style>
+
   <body>
-    <!-- Only for testing -->
+    <!-- Checkbox Prototype -->
+    <div class="checkbox-container">
+      <input type="checkbox" />
+      <img src="./assets/icons/check.svg" class="checkbox" />
+    </div>
+    <script>
+      document
+        .querySelector(".checkbox-container input[type=checkbox]")
+        .addEventListener("click", (e) => {
+          e.target.parentNode.classList.toggle("checked");
+        });
+    </script>
   </body>
 </html>

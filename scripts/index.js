@@ -18,11 +18,19 @@ function loader() {
   });
 }
 
+// Checkbox toggle
+function toggleCheckbox() {
+  $(".checkbox-container input").click(function () {
+    $(this).parent().toggleClass("checked");
+  });
+}
+
+toggleCheckbox();
+
 // DropDown toggle
 function toggleDropdown() {
   // Query all list items and links within the navigation list
   const listItem = document.querySelectorAll(".nav-container .nav-list li");
-  console.log(listItem);
   const listLink = [
     ...document.querySelectorAll(".nav-container .nav-list li a"),
   ];
