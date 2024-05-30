@@ -484,6 +484,24 @@ function uploadListener(fileInputId) {
   });
 }
 
+function selectorListener() {
+  document.querySelectorAll(".input-container.selector").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      const select = el.querySelector("select").value;
+      if (select === "date") {
+        el.querySelector("input").type = "date";
+        el.querySelector("input").placeholder = "YYYY-MM-DD";
+      }
+
+      if (select === "phone") {
+        el.querySelector("input").type = "tel";
+        el.querySelector("input").placeholder = "+966 XX XXX XXXX";
+      }
+    });
+  });
+}
+selectorListener()
+
 // Invoke function
 loader();
 passwordValidationCheck();

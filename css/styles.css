@@ -220,6 +220,34 @@ body {
   border-color: var(--ejada-main-color);
 }
 
+.input-container.selector {
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 2px solid var(--ejada-main-color);
+}
+
+.selector select {
+  border: none;
+  padding: 10px;
+  background: var(--ejada-main-color);
+  flex: 1;
+  color: var(--white);
+  height: 100%;
+  border-right: 2px solid var(--ejada-main-color);
+  outline: none;
+}
+
+.input-container.selector input {
+  border: none;
+  background: transparent;
+  flex: 3;
+  padding: 0 10px;
+  height: 100%;
+  outline: none;
+}
+
 .disabled .input-container,
 .disabled .phone-container,
 .disabled .textarea-container,

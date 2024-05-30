@@ -31,53 +31,70 @@
       --general-border-color: #a3a3a8;
     }
 
-    .checkbox-container {
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      border: 1px solid var(--general-border-color);
-      border-radius: 3px;
-      position: relative;
+    body {
+      height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      gap: 10px;
+      align-items: center;
     }
 
-    .checkbox-container img {
+    .input-container
+
+    .input-container.selector select {
+      border: none;
+      padding: 10px;
+      background: var(--ejada-main-color);
       width: 100%;
+      color: var(--white);
       height: 100%;
-      display: none;
+      border-right: 2px solid var(--ejada-main-color);
+      outline: none;
     }
 
-    .checkbox-container input[type="checkbox"] {
-      width: 100%;
+    .input-container.selector input {
+      border: none;
+      background: transparent;
+      flex: 2;
+      padding: 0 10px;
       height: 100%;
-      position: absolute;
-      opacity: 0;
-    }
-
-    .checkbox-container.checked img {
-      display: block;
-    }
-
-    .checkbox-container.checked {
-      border-color: var(--ejada-main-color);
-      background-color: var(--ejada-main-color);
+      outline: none;
     }
   </style>
 
   <body>
     <!-- Checkbox Prototype -->
-    <div class="checkbox-container">
-      <input type="checkbox" />
-      <img src="./assets/icons/check.svg" class="checkbox" />
+    <div class="input-container selector">
+      <select name="" id="">
+        <option value="date">Date</option>
+        <option value="phone">Phone</option>
+      </select>
+      <input type="text" />
     </div>
+    <div class="input-container selector">
+      <select name="" id="">
+        <option value="date">Date</option>
+        <option value="phone">Phone</option>
+      </select>
+      <input type="text" />
+    </div>
+    <div class="input-container selector">
+      <select name="" id="">
+        <option value="date">Date</option>
+        <option value="phone">Phone</option>
+      </select>
+      <input type="text" />
+    </div>
+    <div class="input-container selector">
+      <select name="" id="">
+        <option value="date">Date</option>
+        <option value="phone">Phone</option>
+      </select>
+      <input type="text" />
+    </div>
+
     <script>
-      document
-        .querySelector(".checkbox-container input[type=checkbox]")
-        .addEventListener("click", (e) => {
-          e.target.parentNode.classList.toggle("checked");
-        });
+      
     </script>
   </body>
 </html>
