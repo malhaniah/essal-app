@@ -315,9 +315,43 @@
                   <img src="../assets/icons/filter.svg" />
                   <p>Filters</p>
                   <span class="filters-used">5</span>
-                  <div></div>
+                  <div class="ruler"></div>
                   <img src="../assets/icons/arrow-down-main.svg" />
                 </button>
+                <div class="sub-filters">
+                  <ul>
+                    <li>
+                      <div class="input-container lg">
+                        <select name="filters">
+                          <option value="type_id">By Type ID</option>
+                          <option value="user_type">By User Type</option>
+                          <option value="date">By Date</option>
+                          <option value="status">By Status</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li><h4>OR</h4></li>
+                    <li>
+                      <div class="input-container selector">
+                        <div class="selectors">
+                          <select name="columns" id="">
+                            <option value="type_id">By Type ID</option>
+                            <option value="user_type">By User Type</option>
+                            <option value="date">By Date</option>
+                            <option value="status">By Status</option>
+                          </select>
+                          <select name="keywords">
+                            <option value="equal">equal to</option>
+                            <option value="greater">greater than</option>
+                            <option value="less">less than</option>
+                            <option value="like">like</option>
+                          </select>
+                        </div>
+                        <input type="text" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="functions">
                 <button>

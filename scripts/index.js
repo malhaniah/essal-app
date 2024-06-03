@@ -500,7 +500,16 @@ function selectorListener() {
     });
   });
 }
-selectorListener()
+selectorListener();
+
+function subFilterListener() {
+  $(".filter-btn").on("click", function () {
+    $(this).toggleClass("active");
+    $(this).next(".sub-filters").toggleClass("active");
+  });
+}
+
+subFilterListener();
 
 // Invoke function
 loader();

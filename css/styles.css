@@ -239,6 +239,16 @@ body {
   outline: none;
 }
 
+.selector .selectors {
+  display: flex;
+  color: var(--ejada-main-color);
+  flex: 3;
+}
+
+.selector .selectors select {
+  flex: 1;
+}
+
 .input-container.selector input {
   border: none;
   background: transparent;
@@ -1388,6 +1398,7 @@ header {
   display: flex;
   gap: 1rem;
   align-items: center;
+position: relative;
 }
 
 .user-list.container .filters .utilities .filter-btn {
@@ -1400,10 +1411,11 @@ header {
   background: transparent;
   border: 2px solid var(--ejada-main-color);
   transition: all 0.3s ease;
+  position: relative;
   color: var(--ejada-main-color);
 }
 
-.user-list.container .filters .utilities .filter-btn div {
+.user-list.container .filters .utilities .filter-btn .ruler {
   width: 1.3px;
   height: 23px;
   background: var(--ejada-main-color);
@@ -1419,6 +1431,40 @@ header {
   justify-content: center;
   background: var(--ejada-main-color);
   color: var(--white);
+}
+
+.user-list.container .filters .utilities .sub-filters {
+  position: absolute;
+  visibility: hidden;
+  top: 50px;
+  left: 65%;
+  min-width: 600px;
+  height: auto;
+  padding: 23px;
+  background: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var();
+  display: block;
+  border-radius: 7px;
+  z-index: 9999999;
+}
+
+.user-list.container .filters .utilities .sub-filters.active {
+  visibility: visible;
+}
+
+.user-list.container .filters .utilities .sub-filters ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.user-list.container .filters .utilities .sub-filters ul li {
+  width: 100%;
 }
 
 .user-list.container .filters .functions {
@@ -2091,7 +2137,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 999999999;
   transition: all 0.3s ease-in-out;
 }
 
