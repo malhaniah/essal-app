@@ -504,8 +504,7 @@ selectorListener();
 
 function subFilterListener() {
   $(".filter-btn").on("click", function () {
-    $(this).toggleClass("active");
-    $(this).next(".sub-filters").toggleClass("active");
+    $(".table-filters").toggleClass("active");
   });
 }
 

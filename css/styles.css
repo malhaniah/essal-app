@@ -239,20 +239,11 @@ body {
   outline: none;
 }
 
-.selector .selectors {
-  display: flex;
-  color: var(--ejada-main-color);
-  flex: 3;
-}
-
-.selector .selectors select {
-  flex: 1;
-}
 
 .input-container.selector input {
   border: none;
   background: transparent;
-  flex: 3;
+  flex: 2;
   padding: 0 10px;
   height: 100%;
   outline: none;
@@ -1432,40 +1423,33 @@ position: relative;
   background: var(--ejada-main-color);
   color: var(--white);
 }
-
-.user-list.container .filters .utilities .sub-filters {
-  position: absolute;
-  visibility: hidden;
-  top: 50px;
-  left: 65%;
-  min-width: 600px;
+ .table-filters {
+  min-width: 100%;
   height: auto;
+  margin: 20px 0;
   padding: 23px;
   background: var(--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid var();
-  display: block;
-  border-radius: 7px;
-  z-index: 9999999;
-}
-
-.user-list.container .filters .utilities .sub-filters.active {
-  visibility: visible;
-}
-
-.user-list.container .filters .utilities .sub-filters ul {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: flex-start;
+  display: none;
+  flex-flow: row wrap;
   gap: 1rem;
+  border-radius: 7px;
+  border: 2px solid var(--ejada-main-color);
 }
 
-.user-list.container .filters .utilities .sub-filters ul li {
-  width: 100%;
+.table-filters.active{
+  display: flex;
 }
+
+.table-filters .filter-component{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 25%;
+  flex-grow: 1;
+}
+
 
 .user-list.container .filters .functions {
   display: flex;
