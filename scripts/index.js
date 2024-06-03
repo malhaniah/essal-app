@@ -510,6 +510,13 @@ function subFilterListener() {
 
 subFilterListener();
 
+function resetFilters() {
+  $(".reset-btn").on("click", function () {
+    $(".table-filters input").val("");
+  });
+}
+resetFilters();
+
 // Invoke function
 loader();
 passwordValidationCheck();
