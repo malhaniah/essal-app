@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejada Portfolio Management | Create New User Type</title>
+    <title>Ejada Portfolio Management | Users List</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <div class="loader"></div>
+    <div class="loader-container">
+      <!-- <div class="loader"></div> -->
+    </div>
     <div class="dashboard-container">
       <!-- ---Start sidebar menu --- -->
       <div>
@@ -247,8 +249,8 @@
       <!-- ------------ ---start dashboard header&content--- -->
       <div class="main-container">
         <!-- Start header  -->
-        <header class="header">
-          <span></span>
+        <header class="header project-header">
+          <span class="header-title">Projects</span>
           <div class="user-nav">
             <div class="user-name flex-row user-profile tooltip-btn">
               <img
@@ -296,212 +298,175 @@
         </header>
         <!-- End header  -->
         <!-- Start dashboard content -->
-        <div class="dashboard-content">
-          <div class="user-path">
-            <span class="inactive">Account Settings</span> <span> > </span>
-            <span class="active">Create New User Type</span>
-          </div>
+        <div class="dashboard-content project-dashboard">
           <div class="user-list container">
-            <h4>Create New Group</h4>
+            <div class="projects-views">
+              <img src="../assets/icons/ph_list-dashes-bold.svg" alt="" />
+              <img
+                class="active"
+                src="../assets/icons/chart-donut-filled.svg"
+                alt=""
+              />
+              <img
+                src="../assets/icons/material-symbols_work-history-rounded.svg"
+                alt=""
+              />
+              <img src="../assets/icons/mdi_timeline.svg" alt="" />
+              <img
+                src="../assets/icons/align-box-bottom-center-filled.svg"
+                alt=""
+              />
+            </div>
             <div class="filters">
-              <div class="tabs-container">
-                <span class="active-tab">General</span>
-                <span>Custom Menu</span>
-                <span>Visibility Options</span>
+              <div class="utilities">
+                <div class="search-container">
+                  <input type="text" placeholder="Search" />
+                  <img src="../assets/icons/microphone.svg" />
+                </div>
+                <button class="filter-btn">
+                  <img src="../assets/icons/filter.svg" />
+                  <p>Filters</p>
+                  <img src="../assets/icons/arrow-down-main.svg" />
+                </button>
+                <button class="printer-btn">
+                  <img src="../assets/icons/printer.svg" />
+                </button>
               </div>
-              <div class="functions">
-                <button class="back-btn">
-                  <img src="../assets/icons/back.svg" />
-                  <p>Back to list</p>
-                </button>
-                <button class="delete-btn">
-                  <img src="../assets/icons/delete.svg" />
-                  <p>Delete</p>
+              <div class="functions projects-functions">
+                <button class="export-btn">
+                  <img src="../assets/icons/file-export.svg" />
+                  <p>Export</p>
+                  <div class="ruler"></div>
+                  <img src="../assets/icons/arrow-down-main.svg" />
                 </button>
                 <button>
-                  <img src="../assets/icons/copy-filled.svg" />
-                  <p>clone</p>
+                  <img src="../assets/icons/Add.svg" />
+                  <p>New Project</p>
                 </button>
-                <button>
-                  <img src="../assets/icons/save.svg" />
-                  <p>Save Changes</p>
-                </button>
+              </div>
+            </div>
+            <div class="project-cards-container">
+              <div class="card">
+                <h4>Health</h4>
+                <table>
+                  <thead>
+                    <th>Task</th>
+                    <th>Task</th>
+                    <th>Progress</th>
+                    <th>Time</th>
+                    <th>Workload</th>
+                    <th>Cost</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Project A</td>
+                      <td>22</td>
+                      <td>Progress</td>
+                      <td>
+                        <img src="../assets/icons/orange-circle.svg" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/red-circle.png" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/blue-circle.png" alt="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Project B</td>
+                      <td>22</td>
+                      <td>Progress</td>
+                      <td>
+                        <img src="../assets/icons/orange-circle.svg" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/red-circle.png" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/blue-circle.png" alt="" />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Project C</td>
+                      <td>22</td>
+                      <td>Progress</td>
+                      <td>
+                        <img src="../assets/icons/orange-circle.svg" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/red-circle.png" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/blue-circle.png" alt="" />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Project D</td>
+                      <td>22</td>
+                      <td>Progress</td>
+                      <td>
+                        <img src="../assets/icons/orange-circle.svg" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/red-circle.png" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/blue-circle.png" alt="" />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Project E</td>
+                      <td>22</td>
+                      <td>Progress</td>
+                      <td>
+                        <img src="../assets/icons/orange-circle.svg" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/red-circle.png" alt="" />
+                      </td>
+                      <td>
+                        <img src="../assets/icons/blue-circle.png" alt="" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="card">
+                <h4>Tasks</h4>
+                <img src="../assets/images/Chart.png" alt="" />
+              </div>
+
+              <div class="card">
+                <h4>Progress</h4>
+                <img src="../assets/images/progress-Chart.png" alt="" />
+              </div>
+
+              <div class="card">
+                <h4>Time</h4>
+                <img src="../assets/images/time-Chart.png" alt="" />
+              </div>
+
+              <div class="card">
+                <h4>Cost</h4>
+                <img src="../assets/images/cost-Chart.png" alt="" />
+              </div>
+
+              <div class="card">
+                <h4>Workload</h4>
+                <img src="../assets/images/workload-Chart.png" alt="" />
               </div>
             </div>
           </div>
-          <main>
-            <div class="accordion-container">
-              <div class="accordion">
-                <div class="accordion-header">
-                  <h4 class="accordion-title">General</h4>
-                  <img
-                    src="../assets/icons/arrow-down.svg"
-                    class="accordion-icon"
-                  />
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-component">
-                    <label for="name">
-                      Name <span class="required">*</span>
-                    </label>
-                    <div class="input-container lg">
-                      <input
-                        type="text"
-                        class="input"
-                        placeholder="Placeholder"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="accordion-component">
-                    <label for="daahboard-default-template">
-                      Dashboard Default Template
-                      <span class="optional">(Optional)</span>
-                    </label>
-                    <select name="default-templates" class="input-container lg">
-                      <option value="placeholder">Placeholder</option>
-                    </select>
-                  </div>
-
-                  <div class="accordion-component">
-                    <label for="default-role">
-                      Default Role
-                      <span class="optional">(Optional)</span>
-                    </label>
-                    <select name="default-role" class="input-container lg">
-                      <option value="c-level">C-Level</option>
-                    </select>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="textarea">
-                      Description <span class="optional">(Optional)</span>
-                    </label>
-                    <textarea
-                      name="description"
-                      placeholder="Placeholder"
-                      maxlength="50"
-                    ></textarea>
-                    <div>
-                      <p>Help text goes here</p>
-                      <p>0/50</p>
-                    </div>
-                    <div class="selection-container">
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Default
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Internal
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Partner
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion">
-                <div class="accordion-header">
-                  <h4>Custom Menu</h4>
-                  <img
-                    src="../assets/icons/arrow-down.svg"
-                    class="accordion-icon"
-                  />
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-component">
-                    <div class="selection-container">
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Organization
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Portfolio
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Projects
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Programs
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Budgets
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Accounts
-                      </label>
-                      <label for="checkbox">
-                        <input
-                          type="checkbox"
-                          name="checkbox"
-                          class="selection-checkbox"
-                        />
-                        Invoicing
-                      </label>
-                    </div>
-                  </div>
-                  <div class="accordion-component">
-                    <label for="checkbox">
-                      <input
-                        type="checkbox"
-                        name="checkbox"
-                        class="selection-checkbox"
-                      />
-                      Check All
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
         </div>
         <!-- End dashboard content -->
       </div>
       <!-- -------------- ---End  dashboard --- -->
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="../scripts/index.js"></script>
   </body>

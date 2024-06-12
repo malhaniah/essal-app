@@ -239,7 +239,6 @@ body {
   outline: none;
 }
 
-
 .input-container.selector input {
   border: none;
   background: transparent;
@@ -1389,7 +1388,7 @@ header {
   display: flex;
   gap: 1rem;
   align-items: center;
-position: relative;
+  position: relative;
 }
 
 .user-list.container .filters .utilities .filter-btn {
@@ -1424,7 +1423,7 @@ position: relative;
   color: var(--white);
 }
 
- .table-filters {
+.table-filters {
   min-width: 100%;
   height: auto;
   margin: 20px 0;
@@ -1439,11 +1438,11 @@ position: relative;
   border: 2px solid var(--ejada-main-color);
 }
 
-.table-filters.active{
+.table-filters.active {
   display: flex;
 }
 
-.table-filters .filter-component{
+.table-filters .filter-component {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1451,7 +1450,6 @@ position: relative;
   flex-basis: 25%;
   flex-grow: 1;
 }
-
 
 .user-list.container .filters .functions {
   display: flex;
@@ -2459,3 +2457,99 @@ input[type="file"] {
   border: none;
   cursor: pointer;
 }
+
+/* ----START PROJECTS DASHBOARD -------*/
+.header-title {
+  font-size: 29px;
+}
+.header.project-header {
+  box-shadow: 0px 5px 10px 0px #4040421f;
+}
+.project-dashboard {
+  background-color: #f9f9f9;
+  height: 100%;
+}
+.user-list.container .filters .functions.projects-functions > button {
+  text-transform: capitalize;
+}
+
+.user-list.container .filters .utilities .printer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--ejada-main-color);
+  transition: all 0.3s ease;
+  position: relative;
+  color: var(--ejada-main-color);
+}
+.projects-views {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+.projects-views img {
+  padding: 10px;
+  background-color: #c5cfda;
+  border-radius: 10px;
+}
+.projects-views img.active {
+  background-color: var(--ejada-main-color);
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+.project-cards-container .card {
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 7px;
+}
+.project-cards-container .card h4 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.project-cards-container .card img {
+  width: 100%;
+}
+.project-dashboard .user-list.container .filters .search-container {
+  background-color: white;
+}
+
+.project-cards-container table tbody td img {
+  max-width: 12px;
+}
+.project-cards-container table thead th {
+  background-color: white;
+  font-size: 14px;
+}
+.project-cards-container table tbody td {
+  background-color: white;
+  white-space: nowrap;
+  text-align: center;
+  color: #86909c;
+  padding: 7px 4px;
+}
+.project-cards-container table tbody tr td:first-child {
+  font-weight: 900;
+  color: #000000;
+}
+.projects-functions .export-btn {
+  position: relative;
+  gap: 25px !important;
+}
+.projects-functions .export-btn .ruler {
+  position: absolute;
+  width: 1px;
+  background-color: var(--ejada-main-color);
+  height: 100%;
+  right: 40px;
+}
+/* ------END PROJECTS DASHBOARD -----*/
