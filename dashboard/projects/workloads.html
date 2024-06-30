@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management | Users List</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div>
+        <div class="sidebar-container" id="sidebar-open">
+          <!-- menu collapse icon -->
+          <div class="collapse-icon" onclick="collapseSidebar()">
+            <img src="../../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../../assets/images/logo-white.svg" alt="ejada logo" />
+            <img src="../../assets/icons/horizontal-line.svg" />
+          </div>
+          <!----- first nav ----->
+          <nav class="nav-container">
+            <ul class="nav-list">
+              <li class="active">
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Home</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Projects</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Programs</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Organization</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Budget</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Resources</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">My Portfolio</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../../assets/icons/setting.svg" />
+                    <img
+                      src="../../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Settings</a>
+                  </div>
+                  <img src="../../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!----- second nav ----->
+          <div class="nav-list bottom-nav">
+            <li>
+              <img src="../../assets/icons/wrench.svg" alt="" />
+              <a href="#"> Help & Support </a>
+            </li>
+            <li>
+              <img src="../../assets/icons/eye.svg" alt="" />
+              <a href="#"> Terms & Condition </a>
+            </li>
+            <li>
+              <img src="../../assets/icons/file.svg" alt="" />
+              <a href="#"> Privacy Policies </a>
+            </li>
+          </div>
+        </div>
+        <!-- ----start collapsed sidebar-------- -->
+        <div class="collapsed-sidebar hide" id="sidebar-collapsed">
+          <!-- menu collapsed icon -->
+          <div class="collapsed-icon" onclick="openSidebar()">
+            <img src="../../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../../assets/images/ejada-logo.svg" alt="" />
+          </div>
+          <a href="#" class="active-nav">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+        </div>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ------------ ---start dashboard header&content--- -->
+      <div class="main-container">
+        <!-- Start header  -->
+        <header class="header project-header">
+          <span class="header-title">Projects</span>
+          <div class="user-nav">
+            <div class="user-name flex-row user-profile tooltip-btn">
+              <img
+                class="user-img"
+                src="../../assets/images/default.svg"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="../../assets/icons/arrow-down.svg" />
+            </div>
+            <img src="../../assets/icons/bell.svg" />
+            <img src="../../assets/icons/line.svg" />
+            <div class="language flex-row">
+              <img src="../../assets/icons/world.svg" />
+              <p>English</p>
+              <img src="../../assets/icons/arrow-down.svg" />
+            </div>
+          </div>
+          <div class="tooltip-container">
+            <div class="tooltip-menu">
+              <ul>
+                <li>
+                  <img src="../../assets/icons/user.svg" />
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <img src="../../assets/icons/organization.svg" />
+                  <a href="#"> My Organization</a>
+                </li>
+                <li>
+                  <img src="../../assets/icons/help.svg" />
+                  <a href="#">Help Center</a>
+                </li>
+                <li>
+                  <img src="../../assets/icons/faq.svg" />
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <img src="../../assets/icons/logout.svg" />
+                  <a href="#">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content project-dashboard">
+          <div class="user-list container">
+            <div class="projects-views">
+              <img src="../../assets/icons/ph_list-dashes-bold.svg" alt="" />
+              <img
+                class="active"
+                src="../../assets/icons/chart-donut-filled.svg"
+                alt=""
+              />
+              <img
+                src="../../assets/icons/material-symbols_work-history-rounded.svg"
+                alt=""
+              />
+              <img src="../../assets/icons/mdi_timeline.svg" alt="" />
+              <img
+                src="../../assets/icons/align-box-bottom-center-filled.svg"
+                alt=""
+              />
+            </div>
+            <div class="filters">
+              <div class="utilities">
+                <div
+                  class="gap-2 flex items-center border border-1 bg-white rounded-lg py-2 px-4 border-gray-300"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="w-full h-full border-0 bg-none"
+                  />
+                  <img src="../../assets/icons/microphone.svg" />
+                </div>
+                <button class="filter-btn">
+                  <img src="../../assets/icons/filter.svg" />
+                  <p>Filters</p>
+                  <img src="../../assets/icons/arrow-down-main.svg" />
+                </button>
+                <button class="printer-btn">
+                  <img src="../../assets/icons/printer.svg" />
+                </button>
+              </div>
+              <div class="functions projects-functions">
+                <button class="export-btn">
+                  <img src="../../assets/icons/file-export.svg" />
+                  <p>Export</p>
+                  <div class="ruler"></div>
+                  <img src="../../assets/icons/arrow-down-main.svg" />
+                </button>
+                <button>
+                  <img src="../../assets/icons/Add.svg" />
+                  <p>New Project</p>
+                </button>
+              </div>
+            </div>
+            <!-- Filters -->
+            <div class="flex gap-4">
+              <div
+                class="border border-gray-300 rounded-md flex items-center py-2 px-4 bg-white"
+              >
+                <input
+                  type="text"
+                  placeholder="DD / MM / YYYY"
+                  class="border-0 w-full h-full"
+                />
+                <img src="../../assets/icons/calender.svg" />
+              </div>
+              <div
+                class="border border-gray-300 rounded-md flex items-center py-2 pr-4 pl-2 w-56 bg-white"
+              >
+                <select class="border-0 w-full outline-0">
+                  <optgroup label="Projects">
+                    <option>Project</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div
+                class="border border-gray-300 rounded-md flex items-center py-2 pr-4 pl-2 w-56 bg-white"
+              >
+                <select class="border-0 w-full outline-0">
+                  <optgroup label="Tags">
+                    <option>Tag</option>
+                  </optgroup>
+                </select>
+              </div>
+              <button
+                class="btn-secondary font-semibold rounded-md items-center border-0 flex gap-2 py-2 px-4"
+              >
+                <img src="/assets/icons/system-user-star.svg" class="w-1-2" />
+                Assignee
+              </button>
+            </div>
+          </div>
+          <!-- Workload Content -->
+          <div class="flex gap-4 items-start py-6">
+            <ul
+              class="shadow-lg bg-white rounded-md list-none flex flex-col flex-basis-1 overflow-hidden"
+              id="workloadTeamList"
+            >
+              <li class="flex flex-col gap-4 pb-6">
+                <span class="p-4 py-6 text-gray-500 flex justify-between"
+                  >Ahmed Moustafa
+                  <img src="/assets/icons/arrow-down.svg" />
+                </span>
+                <ul class="list-none pl-6 pr-4 flex flex-col gap-4">
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-4 pb-6">
+                <span class="p-4 py-6 text-gray-500 flex justify-between"
+                  >Ahmed Moustafa
+                  <img src="/assets/icons/arrow-down.svg" />
+                </span>
+                <ul class="list-none pl-6 pr-4 flex flex-col gap-4">
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-4 pb-6">
+                <span class="p-4 py-6 text-gray-500 flex justify-between"
+                  >Ahmed Moustafa
+                  <img src="/assets/icons/arrow-down.svg" />
+                </span>
+                <ul class="list-none pl-6 pr-4 flex flex-col gap-4">
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-4 pb-6">
+                <span class="p-4 py-6 text-gray-500 flex justify-between"
+                  >Ahmed Moustafa
+                  <img src="/assets/icons/arrow-down.svg" />
+                </span>
+                <ul class="list-none pl-6 pr-4 flex flex-col gap-4">
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-4 pb-6">
+                <span class="p-4 py-6 text-gray-500 flex justify-between"
+                  >Ahmed Moustafa
+                  <img src="/assets/icons/arrow-down.svg" />
+                </span>
+                <ul class="list-none pl-6 pr-4 flex flex-col gap-4">
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                  <li class="text-gray-500 flex justify-between">
+                    Task Title
+                    <img src="/assets/icons/health-eye.svg" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="flex flex-col justify-between">
+              <div class="flex-basis-4">
+                <div class="bg-main rounded-t-md p-4 flex flex-col gap-4">
+                  <div class="w-full flex justify-between">
+                    <span class="text-white text-left w-full">12 JUN</span>
+                    <span class="text-white text-left w-full">12 JUN</span>
+                    <span class="text-white text-left w-full">12 JUN</span>
+                    <span class="text-white text-left w-full">12 JUN</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <div class="flex-basis-1 flex justify-between">
+                      <span class="text-white text-left pr-4">Sun</span>
+                      <span class="text-white text-center pr-4">Mon</span>
+                      <span class="text-white text-center pr-4">Tue</span>
+                      <span class="text-white text-center pr-4">Wed</span>
+                      <span class="text-white text-center pr-4">Thu</span>
+                      <span class="text-white text-center pr-4">Fri</span>
+                      <span class="text-white text-center pr-4">Sat</span>
+                    </div>
+                    <div class="flex-basis-1 flex justify-between">
+                      <span class="text-white text-left pr-4">Sun</span>
+                      <span class="text-white text-center pr-4">Mon</span>
+                      <span class="text-white text-center pr-4">Tue</span>
+                      <span class="text-white text-center pr-4">Wed</span>
+                      <span class="text-white text-center pr-4">Thu</span>
+                      <span class="text-white text-center pr-4">Fri</span>
+                      <span class="text-white text-center pr-4">Sat</span>
+                    </div>
+                    <div class="flex-basis-1 flex justify-between">
+                      <span class="text-white text-left pr-4">Sun</span>
+                      <span class="text-white text-center pr-4">Mon</span>
+                      <span class="text-white text-center pr-4">Tue</span>
+                      <span class="text-white text-center pr-4">Wed</span>
+                      <span class="text-white text-center pr-4">Thu</span>
+                      <span class="text-white text-center pr-4">Fri</span>
+                      <span class="text-white text-center pr-4">Sat</span>
+                    </div>
+                    <div class="flex-basis-1 flex justify-between">
+                      <span class="text-white text-left pr-4">Sun</span>
+                      <span class="text-white text-center pr-4">Mon</span>
+                      <span class="text-white text-center pr-4">Tue</span>
+                      <span class="text-white text-center pr-4">Wed</span>
+                    </div>
+                    <div>
+                      <span>TOTAL</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex flex-col flex-1">
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                      <span class="bg-gray-500 flex-1 text-center p-4">0</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                      <span
+                        class="border border-gray-300 flex-1 text-center p-4"
+                        >4</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    >
+                    <span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    ><span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    ><span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    >
+                    <span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    >
+                    <span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    ><span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    ><span
+                      class="border-b border-t border-gray-300 pl-3 bg-gray-500 w-full pr-6 flex-1 flex justify-center items-center"
+                      >10:15</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End dashboard content -->
+        </div>
+        <!-- -------------- ---End  dashboard --- -->
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../scripts/index.js"></script>
+  </body>
+</html>

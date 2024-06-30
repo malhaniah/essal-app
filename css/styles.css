@@ -48,6 +48,17 @@ body {
   height: 100%;
 }
 
+/* Background Color Utilities */
+.bg-main {
+  background-color: var(--ejada-main-color);
+}
+.bg-secondary {
+  background-color: var(--ejada-secondary-color);
+}
+.bg-accent {
+  background-color: var(--ejada-accent-color);
+}
+
 /* ---- Start of Button Styles ---- */
 .btn {
   cursor: pointer;
@@ -2553,3 +2564,7 @@ input[type="file"] {
   right: 40px;
 }
 /* ------END PROJECTS DASHBOARD -----*/
+ul > li > span.active {
+  background-color: var(--ejada-main-color) !important;
+  color: white !important;
+}

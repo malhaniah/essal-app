@@ -510,13 +510,52 @@ function subFilterListener() {
 
 subFilterListener();
 
+/**
+ * This function is responsible for resetting the filter inputs in the table.
+ *
+ * It attaches a click event listener to all elements with the class 'reset-btn'.
+ * When a 'reset-btn' is clicked, it finds all input elements inside the table-filters
+ * container and sets their values to an empty string.
+ */
 function resetFilters() {
+  // Attach a click event listener to all elements with the class 'reset-btn'
   $(".reset-btn").on("click", function () {
+    // Find all input elements inside the table-filters container
     $(".table-filters input").val("");
   });
 }
 resetFilters();
 
+// This function toggles the visibility of the team list in the workload section.
+//
+// It first selects all span elements inside the workloadTeamList list, and attaches
+// a click event listener to each of them. When a span is clicked, it toggles the
+// 'active' class and the 'bg-main' and 'text-white' classes. It also toggles the
+// 'd-none' class on the siblings of the clicked span.
+//
+// The siblings are the ul elements that are siblings of the clicked span's parent
+// li element. If the clicked span has the 'active' class, it removes the 'd-none'
+// class from the siblings, and if it doesn't have the 'active' class, it adds the
+// 'd-none' class to the siblings.
+//
+// Finally, it selects all ul elements inside the workloadTeamList list's siblings'
+// children, and adds the 'd-none' class to them.
+function toggleWorkloadList() {
+  const el = $("#workloadTeamList li span").on("click", function () {
+    $(this).toggleClass("active");
+
+    if ($(this).hasClass("active")) {
+      $(this).siblings().removeClass("d-none");
+    } else {
+      $(this).siblings().addClass("d-none");
+    }
+  });
+
+  // Select all ul elements inside the workloadTeamList list's siblings' children,
+  // and add the 'd-none' class to them.
+  const sibling = el.parent().siblings().find("ul").addClass("d-none");
+}
+toggleWorkloadList();
 // Invoke function
 loader();
 passwordValidationCheck();
