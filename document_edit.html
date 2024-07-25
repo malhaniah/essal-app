@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div>
+        <div class="sidebar-container" id="sidebar-open">
+          <!-- menu collapse icon -->
+          <div class="collapse-icon" onclick="collapseSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="/assets/images/essal_logo.svg" alt="ejada logo" />
+            <img src="/assets/icons/horizontal-line.svg" />
+          </div>
+          <!----- first nav ----->
+          <nav class="nav-container">
+            <ul class="nav-list">
+              <li class="">
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Dashboard</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Chats</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Documents</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">User Management</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Configuration</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Resources</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Settings</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">My Account</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!----- second nav ----->
+          <div class="nav-list bottom-nav">
+            <li>
+              <img src="../assets/icons/wrench.svg" alt="" />
+              <a href="#"> Help & Support </a>
+            </li>
+            <li>
+              <img src="../assets/icons/eye.svg" alt="" />
+              <a href="#"> Terms & Condition </a>
+            </li>
+            <li>
+              <img src="../assets/icons/file.svg" alt="" />
+              <a href="#"> Privacy Policies </a>
+            </li>
+          </div>
+        </div>
+        <!-- ----start collapsed sidebar-------- -->
+        <div class="collapsed-sidebar hide" id="sidebar-collapsed">
+          <!-- menu collapsed icon -->
+          <div class="collapsed-icon" onclick="openSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/ejada-logo.svg" alt="" />
+          </div>
+          <a href="#" class="active-nav">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+        </div>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ------------ ---start dashboard header&content--- -->
+      <div class="main-container">
+        <!-- Start header  -->
+        <header class="header">
+          <span></span>
+          <div class="user-nav">
+            <div class="user-name flex-row user-profile tooltip-btn">
+              <img
+                class="user-img"
+                src="../assets/images/default.svg"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="../assets/icons/arrow-down.svg" />
+            </div>
+            <img src="../assets/icons/bell.svg" />
+            <img src="../assets/icons/line.svg" />
+            <div class="language flex-row">
+              <img src="../assets/icons/world.svg" />
+              <p>English</p>
+              <img src="../assets/icons/arrow-down.svg" />
+            </div>
+          </div>
+          <div class="tooltip-container">
+            <div class="tooltip-menu">
+              <ul>
+                <li>
+                  <img src="../assets/icons/user.svg" />
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/organization.svg" />
+                  <a href="#"> My Organization</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/help.svg" />
+                  <a href="#">Help Center</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/faq.svg" />
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/logout.svg" />
+                  <a href="#">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="user-path">
+            <span class="active"> < Documents</span>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <div>
+              <h1 class="text-primary">Document Name Here</h1>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                class="btn border-2 border-primary bg-transparent text-primary"
+              >
+                Cancel
+              </button>
+              <button class="btn btn-primary">Save Changes</button>
+            </div>
+          </div>
+          <div
+            class="w-full shadow border-gray-300 rounded-lg flex flex-col gap-4 justify-center items-start p-10 my-6"
+          >
+            <h3 class="text-primary">Document Details</h3>
+            <div class="flex flex-col w-full">
+              <div class="bg-gray p-4">Code #</div>
+              <div class="bg-gray-light p-4">1</div>
+            </div>
+            <div class="flex flex-col w-full">
+              <div class="bg-gray p-4">Document URL</div>
+              <div class="bg-gray-light p-4">
+                <a href="#" class="text-primary-light">URL Name Here</a>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <div class="bg-gray p-4">Document Name</div>
+              <div class="bg-gray-light p-4 flex items-center gap-4">
+                <img src="/assets/icons/file-filled.svg" />
+                Filename
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <div class="bg-gray p-4">Document Name</div>
+              <div class="bg-gray-light p-4 flex items-center gap-4">
+                Employee Handbook
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full shadow rounded-lg flex flex-col gap-4 justify-center items-start p-8 my-6"
+          >
+            <h3 class="text-primary">Employee Access</h3>
+            <div
+              class="border-b border-gray-300 flex justify-between p-3 w-full"
+            >
+              <div class="flex items-center gap-4">
+                <input type="checkbox" />
+                <span>Metadata</span>
+              </div>
+              <div class="flex gap-10 items-center">
+                <span>Access</span>
+                <span>Role</span>
+                <span>Access</span>
+              </div>
+            </div>
+            <div
+              class="border-b border-gray-300 flex justify-between p-3 w-full"
+            >
+              <div class="flex items-center gap-4">
+                <input type="checkbox" />
+                <span>Metadata</span>
+              </div>
+              <div class="flex gap-10 items-center">
+                <span>Access</span>
+                <span>Role</span>
+                <span>Access</span>
+              </div>
+            </div>
+            <div class="flex justify-between p-3 w-full flex gap-4">
+              <div class="flex flex-col gap-2 flex-1">
+                <label>Metadata title</label>
+                <div class="rounded-lg border border-gray-300 py-2 px-4">
+                  <input type="text" class="border-0" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 flex-1">
+                <label>Metadata title</label>
+                <div class="rounded-lg border border-gray-300 py-2 px-4">
+                  <input type="text" class="border-0" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 flex-1">
+                <label>Metadata title</label>
+                <div class="rounded-lg border border-gray-300 py-2 px-4">
+                  <input type="text" class="border-0" />
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-secondary">Add Metadata</button>
+          </div>
+        </div>
+
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

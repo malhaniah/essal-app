@@ -63,6 +63,10 @@ body {
   background: #e6e8e8;
 }
 
+.bg-gray-light {
+  background: #f8f8f8;
+}
+
 .bg-transparent{
   background-color: transparent !important;
 }
