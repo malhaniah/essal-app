@@ -59,6 +59,25 @@ body {
   background-color: var(--ejada-accent-color);
 }
 
+.bg-gray {
+  background: #e6e8e8;
+}
+
+.bg-transparent{
+  background-color: transparent !important;
+}
+
+.text-primary{
+  color: var(--ejada-main-color);
+}
+
+.text-primary-light{
+  color: var(--ejada-secondary-color);
+}
+
+.text-gray{
+  color: var(--general-border-color);
+}
 /* ---- Start of Button Styles ---- */
 .btn {
   cursor: pointer;
@@ -929,7 +948,7 @@ header {
 /* -------start sidebar -------*/
 .dashboard-container .sidebar-container {
   width: 290px;
-  min-height: 100%;
+  height: 100%;
   background-color: var(--ejada-main-color);
   padding: 15px 30px 30px;
   display: flex;
@@ -1020,7 +1039,6 @@ header {
 } */
 
 .dashboard-container .sidebar-container .nav-list {
-  border-top: 1px solid #ffffff;
   padding-top: 13px;
 }
 

@@ -3,103 +3,508 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejada Portfolio Management</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body>
-    <div class="loader"></div>
-
-    <header>
-      <nav class="home-nav">
-        <div class="start-menu">
-          <div class="logo-container">
-            <img src="assets/images/logo.svg" alt="Ejada's Logo" />
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div>
+        <div class="sidebar-container" id="sidebar-open">
+          <!-- menu collapse icon -->
+          <div class="collapse-icon" onclick="collapseSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
           </div>
-          <ul class="menu-list">
-            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Products</a>
+          <div class="logo">
+            <img src="/assets/images/essal_logo.svg" alt="ejada logo" />
+            <img src="/assets/icons/horizontal-line.svg" />
+          </div>
+          <!----- first nav ----->
+          <nav class="nav-container">
+            <ul class="nav-list">
+              <li class="">
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Dashboard</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Chats</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Documents</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">User Management</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Configuration</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Resources</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">Settings</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="sub-item">
+                  <div class="sub-item">
+                    <img src="../assets/icons/setting.svg" />
+                    <img
+                      src="../assets/icons/settings-wheel.svg"
+                      class="alter"
+                    />
+                    <a href="#">My Account</a>
+                  </div>
+                  <img src="../assets/icons/arrow-right.svg" class="arrow" />
+                  <img
+                    src="../assets/icons/arrow-down.svg"
+                    class="arrow-down"
+                  />
+                </div>
+                <ul class="sub-list">
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                  <li><a href="#">Lorem Ipsum 1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!----- second nav ----->
+          <div class="nav-list bottom-nav">
+            <li>
+              <img src="../assets/icons/wrench.svg" alt="" />
+              <a href="#"> Help & Support </a>
             </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Opportunities</a>
+            <li>
+              <img src="../assets/icons/eye.svg" alt="" />
+              <a href="#"> Terms & Condition </a>
             </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">About us</a>
+            <li>
+              <img src="../assets/icons/file.svg" alt="" />
+              <a href="#"> Privacy Policies </a>
             </li>
-          </ul>
-        </div>
-        <div class="user-area">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <img src="assets/icons/search.svg" alt="Search icon" />
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Training & Support</a>
-            </li>
-            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
-            <li class="menu-item">
-              <a href="login.html" class="menu-link login-link"><button>Login</button></a>
-            </li>
-            <li class="menu-item">
-              <a href="login.html" class="menu-link"
-                ><button>Get Started</button></a
-              >
-            </li>
-            <li class="menu-item">
-              <img src="assets/icons/uk-flag.svg" alt="United Kingdom Flag" />
-              <p>EN</p>
-            </li>
-          </ul>
-          <!-- menu list for small screen -->
-          <div class="body-bg"></div>
-          <ul class="menu-list-small">
-            <li class="menu-item">
-              <a href="#" class="menu-link">Training & Support</a>
-            </li>
-            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
-            <li class="menu-item">
-              <p>English</p>
-              <img src="assets/icons/uk-flag.svg" alt="United Kingdom Flag" />
-            </li>
-          </ul>
-          <!-- -------------- -->
-          <img
-            onclick="showMenu()"
-            id="menu-icon"
-            class="menu-icon"
-            src="assets/icons/menu.svg"
-            alt=""
-          />
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="content">
-        <div class="content-text">
-          <h1>
-            Unlock your Projects growth potentials with effective portfolio
-            management
-          </h1>
-          <h6>
-            Elevate your project & product management through ejada dynamic
-            portfolio management solution, tailored for forward-thinking project
-            management teams.
-          </h6>
-          <div class="get-started">
-            <a href="#"><button class="filled">get started</button></a>
-            <a href="#"><button class="outlined">learn more</button></a>
           </div>
         </div>
-        <div class="content-image">
-          <img
-            src="assets/svgs/home_background.svg"
-            alt="A shape art designed for aesthetic purposes"
-          />
+        <!-- ----start collapsed sidebar-------- -->
+        <div class="collapsed-sidebar hide" id="sidebar-collapsed">
+          <!-- menu collapsed icon -->
+          <div class="collapsed-icon" onclick="openSidebar()">
+            <img src="../assets/icons/Collapse Nav bar.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="../assets/images/ejada-logo.svg" alt="" />
+          </div>
+          <a href="#" class="active-nav">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
+          <a href="#">
+            <img src="../assets/icons/settings-wheel.svg" alt=""
+          /></a>
         </div>
       </div>
-    </main>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ------------ ---start dashboard header&content--- -->
+      <div class="main-container">
+        <!-- Start header  -->
+        <header class="header">
+          <span></span>
+          <div class="user-nav">
+            <div class="user-name flex-row user-profile tooltip-btn">
+              <img
+                class="user-img"
+                src="../assets/images/default.svg"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="../assets/icons/arrow-down.svg" />
+            </div>
+            <img src="../assets/icons/bell.svg" />
+            <img src="../assets/icons/line.svg" />
+            <div class="language flex-row">
+              <img src="../assets/icons/world.svg" />
+              <p>English</p>
+              <img src="../assets/icons/arrow-down.svg" />
+            </div>
+          </div>
+          <div class="tooltip-container">
+            <div class="tooltip-menu">
+              <ul>
+                <li>
+                  <img src="../assets/icons/user.svg" />
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/organization.svg" />
+                  <a href="#"> My Organization</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/help.svg" />
+                  <a href="#">Help Center</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/faq.svg" />
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <img src="../assets/icons/logout.svg" />
+                  <a href="#">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="user-path">
+            <span class="active"> < Documents</span>
+          </div>
+          <div class="user-list container">
+            <div class="filters">
+              <div class="utilities">
+                <div
+                  class="border border-gray-100 flex items-center py-2 px-4 rounded-lg gap-4"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="w-full h-full border-0"
+                  />
+                  <img src="../assets/icons/microphone.svg" />
+                </div>
+                <button class="filter-btn" id="">
+                  <img src="../assets/icons/filter.svg" />
+                  <p>Filters</p>
+                  <img src="../assets/icons/arrow-down-main.svg" />
+                </button>
+              </div>
+              <div class="flex items-center gap-4">
+                <button
+                  class="border-2 border-primary rounded-lg flex items-center gap-2 py-2 px-4 bg-transparent"
+                >
+                  <img src="/assets/icons/file-import.svg" />
+                  <p class="text-primary">Import</p>
+                </button>
+                <button
+                  class="border-2 border-primary rounded-lg flex items-center gap-2 px-3 bg-transparent"
+                >
+                  <img src="/assets/icons/file-import.svg" />
+                  <p class="text-primary">Export</p>
+                  <span class="bg-main w-05 h-10"></span>
+                  <img src="/assets/icons/arrow-down-main.svg" />
+                </button>
+                <button
+                  class="border-0 rounded-lg flex items-center gap-2 py-3 px-4 bg-main"
+                >
+                  <img src="/assets/icons/Add.svg" />
+                  <p class="text-white">New Document</p>
+                  <div class="flex items-center border-l border-primary h-full">
+                    <img src="/assets/icons/arrow-down-main.svg" />
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="flex py-6 gap-4">
+              <div class="flex-1 flex gap-2 flex-col">
+                <label>Label</label>
+                <div class="border border-gray-100 py-2 px-4 rounded-lg">
+                  <select name="" id="" class="w-full border-0">
+                    <option value="label">label</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1 flex gap-2 flex-col">
+                <label>Label</label>
+                <div class="border border-gray-100 py-2 px-4 rounded-lg">
+                  <select name="" id="" class="w-full border-0">
+                    <option value="label">label</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1 flex gap-2 flex-col">
+                <label>Label</label>
+                <div class="border border-gray-100 py-2 px-4 rounded-lg">
+                  <select name="" id="" class="w-full border-0">
+                    <option value="label">label</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1 flex gap-2 flex-col">
+                <label>Label</label>
+                <div class="border border-gray-100 py-2 px-4 rounded-lg">
+                  <select name="" id="" class="w-full border-0">
+                    <option value="label">label</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1 items-center justify-end flex">
+                <span class="text-primary flex items-center gap-2"
+                  >Apply Filters
+                  <img src="/assets/icons/double-arrows-right.svg.svg" alt=""
+                /></span>
+              </div>
+            </div>
+            <div class="users-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 40px">
+                      <input type="checkbox" id="selectAllCheckbox" />
+                    </th>
+                    <!-- Checkbox to select all users -->
+                    <th>Code #</th>
+                    <th>Document URL</th>
+                    <th>Document Name</th>
+                    <th>Document Type</th>
+                    <th>Metadata</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th></th>
+                    <!-- Empty header for options column -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" class="userCheckbox" /></td>
+                    <td>1</td>
+                    <td>
+                      <a href="#" class="text-primary-light">URL NAME HERE</a>
+                    </td>
+                    <td class="flex-row table-img">
+                      <img src="/assets/icons/file-filled.svg" alt="" \\ />
+                      Filename
+                    </td>
+                    <td>Employee Handbook</td>
+                    <td>
+                      <span class="bg-gray rounded-lg py-1 px-3">All</span>
+                      <span class="bg-gray rounded-lg py-1 px-3">HR</span>
+                      <span class="bg-gray rounded-lg py-1 px-3">AI</span>
+                      <span class="bg-gray rounded-lg py-1 px-3">IT</span>
+                    </td>
+                    <td>17/02/2024</td>
+                    <td class="status-active"><div>Active</div></td>
+                    <td class="options-column">
+                      <div class="options-container">
+                        <div class="options-menu">
+                          <ul>
+                            <li><a href="#">Edit</a></li>
+                            <li><a href="#">Manage</a></li>
+                            <li><a href="#">View Details</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <button class="active-btn">
+                        <img src="../assets/icons/three-dot.svg" />
+                      </button>
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+            <!------ table footer  ------>
+            <div class="table-footer flex-row">
+              <div class="flex-row">
+                <span>Display</span>
+                <!-- <div class="display-count">
+                  <span>12</span>
+                  <div>
+                    <img src="../assets/icons/line-thin.svg" alt="" />
+                    <img src="../assets/icons/Vector2.svg" alt="" />
+                  </div>
+                </div> -->
+                <select class="display-count">
+                  <option value="12">12</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+                <span class="active-result">12</span> results out of
+                <span>250</span>
+              </div>
+
+              <div class="flex-row pagination-arrows">
+                <div class="current-page">
+                  page <span class="active-page">1</span> of
+                  <span class="total-pages">5</span>
+                </div>
+                <ul class="pagination-pages">
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img
+                        src="../assets/icons/double-arrows-left.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img src="../assets/icons/arr-prev.svg" alt="" />
+                    </a>
+                  </li>
+                  <li><a class="page active">1</a></li>
+                  <li><a class="page">2</a></li>
+                  <li><a class="page">3</a></li>
+                  <li><a class="page">...</a></li>
+                  <li><a class="page">20</a></li>
+                  <li>
+                    <a href="#" class="next">
+                      <img src="../assets/icons/arr-next.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="next">
+                      <img
+                        src="../assets/icons/double-arrows-right.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <script src="scripts/index.js"></script>
+    <script src="../scripts/index.js"></script>
   </body>
 </html>
