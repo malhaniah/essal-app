@@ -12,3 +12,5 @@
 
 # Things to be made later
 - Refactor basically all pages into more tailwind based using ***global.css***
+ 
+ HEllo
